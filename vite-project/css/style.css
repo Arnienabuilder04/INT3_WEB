@@ -1,0 +1,59 @@
+:root {
+  --main-brown: #EEE6DB;
+  --dark-brown: #887764;
+  --main-red: #A12828;
+  --main-blue: #484387;
+  --light-gold: #FFBF00;
+  --dark-gold: #BB9010;
+}
+body{
+  font-family: "Josefin Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5rem;
+  background-color: var(--main-brown);
+  width: 100vw;
+}
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: url("../assets/hero_phone.png");
+  background-repeat: no-repeat;
+  background-size:150vw auto;
+  background-position: bottom center;
+  height: 100dvh;
+}
+.hero>p{
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  max-width: 80vw;
+}
+.hero_lottie{
+  width: 100vw;
+  height: auto;
+}
+.hero_button{
+  font-family: "Josefin Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  position: relative;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  background-color: var(--main-blue);
+  width: 40vw;
+  height: 4rem;
+}
+.hero_button::after{
+  position: absolute;
+  top:-1rem;
+  left:-1rem;
+  content:'';
+  width: 2rem;
+  height: 2rem;
+  border-radius: 30rem;
+  background-color: var(--main-brown);
+}
