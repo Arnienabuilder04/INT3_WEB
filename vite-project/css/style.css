@@ -6,54 +6,272 @@
   --light-gold: #FFBF00;
   --dark-gold: #BB9010;
 }
+.blue_text{
+  color: var(--main-blue);
+  font-weight: 800;
+}
+.gold_text {
+  color: var(--light-gold);
+  font-weight: 800;
+}
 body{
   font-family: "Josefin Slab", serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 24px;
+  line-height: 28px;
   background-color: var(--main-brown);
   width: 100vw;
 }
+/*----------------navigation-----------------*/
+nav{
+  margin-top: 0.5rem;
+  height: 4rem;
+  width: 100vw;
+  z-index: 1;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(238, 230, 219, .28);
+}
+nav>img{
+  max-width: 3rem;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+/*----------------hero-----------------*/
 .hero{
+  overflow: hidden;
+  padding-top: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content:flex-start ;
   text-align: center;
   background-image: url("../assets/hero_phone.png");
   background-repeat: no-repeat;
-  background-size:150vw auto;
-  background-position: bottom center;
-  height: 100dvh;
+  background-size: 150vw auto;
+  background-position: center bottom ;
+  height: 100vh;
 }
 .hero>p{
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   max-width: 80vw;
 }
 .hero_lottie{
-  width: 100vw;
+  position: relative;
+  width: 80vw;
   height: auto;
 }
+.hero_lottie::before {
+  position: absolute;
+  top: -17.5vw;
+  left: 10vw;
+  background-image: url('../assets/hero_train.png');
+  background-repeat: no-repeat;
+  content: '';
+  background-size: contain;
+  width: 300vw;
+  height: 8rem;
+}
 .hero_button{
+  background-image: url('../assets/back_button.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Josefin Slab", serif;
   font-optical-sizing: auto;
   font-weight: 600;
-  position: relative;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-decoration: none;
   color: white;
-  background-color: var(--main-blue);
-  width: 40vw;
-  height: 4rem;
+  width: 50vw;
+  height: 3rem;
 }
-.hero_button::after{
-  position: absolute;
-  top:-1rem;
-  left:-1rem;
-  content:'';
-  width: 2rem;
-  height: 2rem;
-  border-radius: 30rem;
-  background-color: var(--main-brown);
+
+/*----------------intro-----------------*/
+.intro{
+  position: relative;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8vh;
+  height: 60vh;
+  width: 100vw;
+  margin-top: -5vh;
+}
+.intro>p{
+    max-width: 90vw;
+}
+.intro>img{
+  max-width: 80vw;
+}
+/*----------------louise-----------------*/
+.louise{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.louise_2>p,
+.louise_4>p{
+  color:white ;
+  max-width: 80vw;
+}
+
+
+.louise_1{
+  width: 100vw;
+  height:100vh;
+  background-image: url('../assets/louise1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.louise_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -72vh;
+  background-image: url('../assets/louise2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 60vh;
+}
+.louise_3 {
+  
+  margin-top: -10vh;
+  background-image: url('../assets/louise4.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100vw;
+  height: 40rem;
+}
+.louise_4 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  margin-top: -90vh;
+  background-image: url('../assets/louise5.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100vw;
+  height: 80vh;
+}
+/*----------------convo-----------------*/
+.convo{
+  width: 100vw;
+}
+.year{
+  width: 100vw;
+}
+.convo>div{
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('../assets/container.svg');
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: center;
+}
+.convo>div>p{
+  max-width: 80vw;
+}
+/*----------------chapter one-----------------*/
+.chapter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  background-image: url('../assets/chapter_one.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.departure>img{
+max-width: 100vw;
+}
+.train_info{
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(99, 89, 76, 0) 0%, rgba(99, 89, 76, 0.8169861694677871) 19%, rgba(99, 89, 76, 1) 35%, rgba(99, 89, 76, 1) 100%);
+  width: 100vw;
+  height: 80vh;
+}
+.train_info>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('../assets/train_back_phone.svg');
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: center;
+  width: 100vw;
+  height: 60vh;
+}
+.train_info>div>p{
+  max-width: 80vw;
+}
+
+.people_info {
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(0deg, rgba(99, 89, 76, 0) 0%, rgba(99, 89, 76, 0.8169861694677871) 19%, rgba(99, 89, 76, 1) 35%, rgba(99, 89, 76, 1) 100%);
+  width: 100vw;
+  height: 80vh;
+}
+
+.people_info>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('../assets/people_back_phone.svg');
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: center;
+  width: 100vw;
+  height: 60vh;
+}
+
+.people_info>div>p {
+  color: white;
+  max-width: 80vw;
+}
+/*----------------chapter two-----------------*/
+.chapter1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  background-image: url('../assets/chapter_one.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/*----------------items-----------------*/
+.items{
+  margin-left: 5vw;
+  height: 50vh;
+  width: 95vw;
+  background-image: url('../assets/items_back_phone.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
 }
