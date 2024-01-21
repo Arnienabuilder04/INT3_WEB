@@ -168,7 +168,7 @@ nav>img{
 .year{
   width: 100vw;
 }
-.convo>div{
+.convo--intro{
   width: 100vw;
   height: 60vh;
   display: flex;
@@ -181,8 +181,37 @@ nav>img{
   background-size: 100vw;
   background-position: center;
 }
-.convo>div>p{
+.convo--intro>p{
   max-width: 80vw;
+}
+.convo--exchange{
+  width: 100vw;
+  height:auto ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.convo--exchange>li{
+  border: #BB9010 solid 0.1rem;
+  border-radius: 2rem;
+  list-style: none;
+  max-width: 95vw;
+}
+.convo--exchange>li>p {
+  color: white;
+  padding: 1rem 1rem;
+  max-width: 80vw;
+}
+.text--blue{
+  background-color: var(--main-blue);
+}
+.text--red{
+  background-color: #A12828;
+}
+.talkers{
+  width: 100vw;
 }
 /*----------------chapter one-----------------*/
 .chapter{
