@@ -39,7 +39,15 @@ const personLayer = () => {
     .to(".departure--group__two", { yPercent: 40 }, 0)
     .to(".departure--group__three", { yPercent: 80 }, 0)
 }
+const checkNavigation = () => {
+  if (document.querySelector(".links").style.display === "flex") {
+    document.querySelector(".links").style.display = "none";
+  } else {
+    document.querySelector(".links").style.display = "flex";
+  }
+}
 const init = () => {
+  document.querySelector('.hamburger').addEventListener('click',checkNavigation)
   textAnimator()
   heroAnimator()
   personLayer()
