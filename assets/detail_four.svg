@@ -1,0 +1,14 @@
+<svg width="492" height="36" viewBox="0 0 492 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 16H196.5" stroke="#BB9010"/>
+<path d="M0 21H196.5" stroke="#BB9010"/>
+<path d="M295.5 16H492" stroke="#BB9010"/>
+<path d="M295.5 21H492" stroke="#BB9010"/>
+<circle cx="243" cy="18" r="17.5" stroke="#BB9010"/>
+<circle cx="243" cy="18" r="6.5" stroke="#BB9010"/>
+<circle cx="254" cy="18" r="6.5" stroke="#BB9010"/>
+<circle cx="232" cy="18" r="6.5" stroke="#BB9010"/>
+<circle cx="4" cy="4" r="3.5" transform="matrix(-1 0 0 1 222 14)" stroke="#BB9010"/>
+<circle cx="4" cy="4" r="3.5" transform="matrix(-1 0 0 1 272 14)" stroke="#BB9010"/>
+<circle cx="243" cy="29" r="6.5" transform="rotate(90 243 29)" stroke="#BB9010"/>
+<circle cx="243" cy="7" r="6.5" transform="rotate(90 243 7)" stroke="#BB9010"/>
+</svg>

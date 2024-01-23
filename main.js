@@ -39,18 +39,62 @@ const personLayer = () => {
     .to(".departure--group__two", { yPercent: 40 }, 0)
     .to(".departure--group__three", { yPercent: 80 }, 0)
 }
+
 const checkNavigation = () => {
-  if (document.querySelector(".links").style.display === "flex") {
-    document.querySelector(".links").style.display = "none";
+  if (document.querySelector(".hamburger").style.transform === "rotate(90deg)") {
+    document.querySelector(".hamburger").style.transform = 'rotate(0deg)';
+
+    document.querySelector(".links").style.transform = "translateY(0rem)";
+
+
   } else {
-    document.querySelector(".links").style.display = "flex";
+    document.querySelector(".hamburger").style.transform = 'rotate(90deg)';
+
+    document.querySelector(".links").style.transform = "translateY(40rem)";
+
+
   }
 }
+const cardCheckerOne = () => {
+  document.querySelector('.card__one').classList.add('hide');
+  document.querySelector('.awnser__one').removeEventListener('click', cardCheckerOne);
+  document.querySelector('.card__two').classList.remove('hide');
+  document.querySelector('.awnser__two').addEventListener('click', cardCheckerTwo);
+};
+
+const cardCheckerTwo = () => {
+  document.querySelector('.card__two').classList.add('hide');
+  document.querySelector('.awnser__two').removeEventListener('click', cardCheckerTwo);
+  document.querySelector('.card__three').classList.remove('hide');
+  document.querySelector('.awnser__three').addEventListener('click', cardCheckerThree);
+};
+
+const cardCheckerThree = () => {
+  document.querySelector('.card__three').classList.add('hide');
+  document.querySelector('.awnser__three').removeEventListener('click', cardCheckerThree);
+  document.querySelector('.card__four').classList.remove('hide');
+  document.querySelector('.awnser__four').addEventListener('click', cardCheckerFour);
+};
+
+const cardCheckerFour = () => {
+  document.querySelector('.card__four').classList.add('hide');
+  document.querySelector('.awnser__four').removeEventListener('click', cardCheckerFour);
+  document.querySelector('.card__five').classList.remove('hide');
+  document.querySelector('.awnser__five').addEventListener('click', cardCheckerFive);
+};
+
+const cardCheckerFive = () => {
+  document.querySelector('.card__five').classList.add('hide');
+  document.querySelector('.awnser__five').removeEventListener('click', cardCheckerFive);
+};
+
 const init = () => {
-  document.querySelector('.hamburger').addEventListener('click',checkNavigation)
-  textAnimator()
-  heroAnimator()
-  personLayer()
+  document.querySelector('.awnser__one').addEventListener('click', cardCheckerOne);
+  document.querySelector('.hamburger').addEventListener('click', checkNavigation);
+  textAnimator();
+  heroAnimator();
+  personLayer();
   gsap.registerPlugin(ScrollTrigger);
-}
-init()
+};
+
+init();
