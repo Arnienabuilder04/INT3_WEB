@@ -8,6 +8,7 @@
 }
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -33,6 +34,7 @@ body{
   line-height: 28px;
   background-color: var(--main-brown);
   width: 100vw;
+  line-height: 1.5;
 }
 /*----------------navigation-----------------*/
 
@@ -59,7 +61,7 @@ nav>img{
   cursor: pointer;
 }
 .links{
-  padding-top: 4rem;
+  padding-top: 5rem;
   position: fixed;
   display: flex;
   top: -40rem;
@@ -75,9 +77,9 @@ nav>img{
 }
 
 .links>a{
+  line-height: 1.2;
   width: 80vw;
   border-bottom: #FFBF00 solid 0.05rem;
-  margin-top: 2rem;
   text-align: center;
   color:white;
   text-decoration: none;
@@ -91,6 +93,21 @@ nav>img{
 header{
   z-index: 11;
   position: fixed;
+}
+.lang>ul{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 10vw;
+}
+.lang>ul>li{
+  color: black;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background-color: #FEFEFE;
+  border-radius: 2rem;
+  padding: 1rem;
 }
 /*----------------hero-----------------*/
 .hero{
@@ -337,11 +354,13 @@ header{
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 4rem;
+  height: 6rem;
+  line-height: 1;
   background-image: url('../assets/chapter_one.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+    text-align: center;
 }
 .departure{
   position: relative;
@@ -646,12 +665,12 @@ margin: 2rem;
   max-width: 100%;
 }
 .documents__find{
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  background-color: #FEFEFE;
+  background-color: var(--main-blue);
 }
 .documents__find>p {
   margin-top: 2rem;
@@ -661,10 +680,33 @@ margin: 2rem;
   max-width: 30rem;
 }
 .documents__find--options{
+
   gap: 5vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+.documents__find--options>h3{
+  text-align: center;
+  max-width: 30rem;
+  width: 80vw;
+}
+.document--image{
+  width: 30vw;
+  max-width: 10rem;
+}
+.world{
+  padding-top: 5rem;
+  overflow: hidden;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+ 
+}
+.world>img{
+  width: 150vw;
 }

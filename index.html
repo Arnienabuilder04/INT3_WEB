@@ -21,10 +21,17 @@
       <img src="./assets/hamburger.svg" class="hamburger"></img>
     </nav>
     <div class="links">
-      <a href="#chapter--one">chapter 1<br><span class="chapter_title">Intro</span></a>
-      <a href="#chapter--two">chapter 2<br><span class="chapter_title">On y va!</span></a>
-      <a href="#chapter--three">chapter 3<br><span class="chapter_title">A meal fit for a queen.</span></a>
-      <a href="#chapter--four">chapter 4<br><span class="chapter_title">A bridge between East and West.</span></a>
+      <a href="#chapter__one">chapter 1<br><span class="chapter_title">On Y va!</span></a>
+      <a href="#chapter__two">chapter 2<br><span class="chapter_title">A meal fit for a queen.</span></a>
+      <a href="#chapter__three">chapter 3<br><span class="chapter_title">A bridge between east and west</span></a>
+      <a href="#chapter__four">chapter 4<br><span class="chapter_title">I could have met Agatha Christie!</span></a>
+      <div class="lang">
+        <ul>
+          <li>FR</li>
+          <li>NL</li>
+          <li>EN</li>
+        </ul>
+      </div>
     </div>
   </header>
   <main>
@@ -82,7 +89,7 @@
       </div>
     </section>
     <section>
-      <div class="chapter chapter__one" >
+      <div id="chapter__one" class="chapter chapter__one" >
         <h2>on y va!</h2>
       </div>
       <div class="departure">
@@ -156,9 +163,12 @@
           </p>
         </div>
       </div>
+      <div class="world">
+        <img src="./assets/world.png" alt="">
+      </div>
     </section>
     <section>
-      <div class=" chapter chapter__two">
+      <div id="chapter__two" class=" chapter chapter__two">
         <h2>a meal fit for a queen</h2>
       </div>
       <div class="items">
@@ -229,11 +239,16 @@
         of the trip.</p>
         </div>
         <div class="documents__find">
-          <p>The train attendant collected all documents when we set off.<br><br>Can you find the right document?</p>
           <div class="documents__find--options">
-            <img src="./assets/document_one.png" alt="">
-            <img src="./assets/document_one.png" alt="">
-            <img src="./assets/document_one.png" alt="">
+              <img class="text__detail text__detail--louise" src="./assets/detail_one.svg" alt="">
+              <h3>The train attendant collected all documents when we set off.<br><br>Can you find the right document?</h3>
+              <div>
+                <img class="document--image document--image--wrong_one" src="./assets/logo_one_na.png" alt="">
+                <img class="document--image document--image--right" src="./assets/logo_two_na.png" alt="">
+                <img class="document--image document--image--wrong_two" src="./assets/logo_three_na.png" alt="">
+              </div>
+              <p class="document__feedback">Maybe it's your lucky day!</p>
+              <img class="text__detail" src="./assets/detail_one.svg" alt="">
           </div>
         </div>
         <div class="documents__text_two">
@@ -244,7 +259,40 @@
 
       </div>
     </section>
-    
+    <section>
+      <div id="chapter__three" class="chapter chapter__three">
+        <p>A bridge between East and West</p>
+      </div>
+      <p>At last we arrived at the Simplon Orient Express train's final destination: Sirkeci station in Istanbul. Talk about
+      exotic! This stunning station was built in 1890 by the German architect August Jachmund especially for the Orient
+      Express. It was a magical blend of elements from east and west.</p>
+
+      <p>The Taurus Express first took us to Tripoli in Lebanon. Rolls Royce buses drove us on to Haifa, Palestine. Then we got
+      back on the train to Kantara on the Suez Canal, where we boarded a ferry. One last train brought us to Cairo. So the
+      whole journey from Paris to our final destination took 4 trains, 2 ships, one bus and 6 days. This day and age that
+      seems unthinkable, but at the time it was really fast!</p>
+    </section>
+    <section>
+      <div id="chapter__four" class="chapter chapter__four">
+        <p>I could have met Agatha Christie!</p>
+      </div>
+      <p>The reason why I was so terrified beforehand was because I'd heard the story of the stranded Orient Express. That
+      particular train got stuck 130 kilometres from Istanbul in a heavy snowstorm. The train remained there for 5 days, until
+      a snow clearance team turned up. In the meantime temperatures inside had reached -10°C! That story incidentally was the
+      inspiration for Agatha Christie's novel “Murder on the Orient Express” a few years later. Did you know that she
+      travelled for the first time on the Orient Express in the same year as me? With a bit of luck I might even have met her!</p>
+
+      <p>In any case, I will always remember that journey as the greatest adventure of my life. I can still picture every minute
+      as if it were a film. I had the time of my life aboard the Simplon Orient Express.</p>
+    </section>
+    <section>
+      <div>
+        <p>previous story</p>
+      </div>
+      <div>
+        <p>next story</p>
+      </div>
+    </section>
    
   </main>
 
