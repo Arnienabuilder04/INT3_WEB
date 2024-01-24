@@ -442,6 +442,7 @@ header{
 .cards-container {
   z-index: 2;
   width: 100vw;
+  height: 110vh;
   background-color: #FEFEFE;
   text-align: center;
   display: flex;
@@ -466,6 +467,18 @@ header{
   text-align: center;
   background-color: var(--main-red);
   border-radius: 1rem;
+}
+.result{
+  color: white;
+  background-color: var(--main-blue);
+  padding: 2rem 1rem;
+  border: #BB9010 solid 0.1rem;
+  border-radius: 1rem;
+}
+.result__number {
+  font-weight: 500;
+  font-size: 3rem;
+  color: var(--light-gold);
 }
 .card>div{
   display: flex;
@@ -556,12 +569,14 @@ header{
   list-style: none;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 .dish{
+  width: 90vw;
+  max-width: 20rem;
   border-radius: 1rem;
   padding: 2rem;
   background-color: var(--main-blue);
@@ -573,9 +588,9 @@ header{
 }
 .dish>img{
   width: 50vw;
-  max-width: 30rem;
+  max-width: 25rem;
 }
-.dish>p {
+.dish__title {
   color: var(--light-gold);
   font-family: "Italianno";
   font-size: 2.5rem;

@@ -1,3 +1,4 @@
+
 const heroAnimator = () =>{
  
 
@@ -55,45 +56,14 @@ const checkNavigation = () => {
 
   }
 }
-const cardCheckerOne = () => {
-  document.querySelector('.card__one').classList.add('hide');
-  document.querySelector('.awnser__one').removeEventListener('click', cardCheckerOne);
-  document.querySelector('.card__two').classList.remove('hide');
-  document.querySelector('.awnser__two').addEventListener('click', cardCheckerTwo);
-};
-
-const cardCheckerTwo = () => {
-  document.querySelector('.card__two').classList.add('hide');
-  document.querySelector('.awnser__two').removeEventListener('click', cardCheckerTwo);
-  document.querySelector('.card__three').classList.remove('hide');
-  document.querySelector('.awnser__three').addEventListener('click', cardCheckerThree);
-};
-
-const cardCheckerThree = () => {
-  document.querySelector('.card__three').classList.add('hide');
-  document.querySelector('.awnser__three').removeEventListener('click', cardCheckerThree);
-  document.querySelector('.card__four').classList.remove('hide');
-  document.querySelector('.awnser__four').addEventListener('click', cardCheckerFour);
-};
-
-const cardCheckerFour = () => {
-  document.querySelector('.card__four').classList.add('hide');
-  document.querySelector('.awnser__four').removeEventListener('click', cardCheckerFour);
-  document.querySelector('.card__five').classList.remove('hide');
-  document.querySelector('.awnser__five').addEventListener('click', cardCheckerFive);
-};
-
-const cardCheckerFive = () => {
-  document.querySelector('.card__five').classList.add('hide');
-  document.querySelector('.awnser__five').removeEventListener('click', cardCheckerFive);
-};
-const logoCheckerOne = () =>{
-  document.querySelector('.louise__three--image--wrong_one').src ="./assets/logo_one_a.png"
+const logoCheckerOne = () => {
+  document.querySelector('.louise__three--image--wrong_one').src = "./assets/logo_one_a.png"
   document.querySelector('.emblem__feedback').innerHTML = `You picked the wrong emblem, try again!`
 
-  setTimeout(() => { 
+  setTimeout(() => {
     document.querySelector('.louise__three--image--wrong_one').classList.add('hide')
-    ; }, 1000)
+      ;
+  }, 1000)
 }
 
 const logoCheckerTwo = () => {
@@ -115,13 +85,73 @@ const logoCheckerThree = () => {
   }, 1000)
 }
 
+const cardCheckerOne = () => {
+  document.querySelector('.card__one').classList.add('hide');
+  document.querySelector('.awnser__one').removeEventListener('click', cardCheckerOne);
+  document.querySelector('.card__two').classList.remove('hide');
+  document.querySelector('.awnser__two').addEventListener('click', cardCheckerTwo);
+  document.querySelector('.awnser__correct').addEventListener('click', awnserChecker);
+}
+
+const cardCheckerTwo = () => {
+  document.querySelector('.card__two').classList.add('hide');
+  document.querySelector('.awnser__two').removeEventListener('click', cardCheckerTwo);
+  document.querySelector('.card__three').classList.remove('hide');
+  document.querySelector('.awnser__three').addEventListener('click', cardCheckerThree);
+};
+
+const cardCheckerThree = () => {
+  document.querySelector('.card__three').classList.add('hide');
+  document.querySelector('.awnser__three').removeEventListener('click', cardCheckerThree);
+  document.querySelector('.card__four').classList.remove('hide');
+  document.querySelector('.awnser__four').addEventListener('click', cardCheckerFour);
+};
+
+const cardCheckerFour = () => {
+  document.querySelector('.card__four').classList.add('hide');
+  document.querySelector('.awnser__four').removeEventListener('click', cardCheckerFour);
+  document.querySelector('.card__five').classList.remove('hide');
+  document.querySelector('.awnser__five').addEventListener('click', cardCheckerFive);
+
+};
+
+const cardCheckerFive = () => {
+  document.querySelector('.card__five').classList.add('hide');
+  document.querySelector('.awnser__five').removeEventListener('click', cardCheckerFive);
+  document.querySelector('.result').classList.remove('hide');
+
+};
+const yourFunction = (event) => {
+  if(event.target.classList.contains('awnser__correct')){
+    awnserChecker()
+    console.log('correct')
+  }else{
+    console.log('incorrect')
+  }
+}
+
+const elements = document.querySelectorAll('.awnser');
+  elements.forEach(element => {
+    element.addEventListener('click', yourFunction);
+  });
+
+let i = 0;
+
+const awnserChecker = () => {
+  i = i + 1;
+  console.log(i);
+  document.querySelector('.result').innerHTML = `<p>Your score is<br><br><span class='result__number'> ${i}/5</span><p>`
+  return i;
+};
+
 const init = () => {
+ 
   document.querySelector('.louise__three--image--wrong_one').addEventListener('click', logoCheckerOne);
   document.querySelector('.louise__three--image--right').addEventListener('click', logoCheckerTwo);
   document.querySelector('.louise__three--image--wrong_two').addEventListener('click', logoCheckerThree);
-
-
+  
   document.querySelector('.awnser__one').addEventListener('click', cardCheckerOne);
+
   document.querySelector('.hamburger').addEventListener('click', checkNavigation);
   textAnimator();
   heroAnimator();
