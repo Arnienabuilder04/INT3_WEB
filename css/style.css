@@ -322,17 +322,11 @@ header{
   align-self: flex-end;
   background-color: #A12828;
 }
-.convo__talkers{
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
+.convo__talker{
+  width: 70vw;
+  max-width: 30rem;
 }
-.convo__talkers>img{
-  width: 40vw;
-  max-width: 20rem;
-}
+
 
 /*----------------chapter one-----------------*/
 .chapter{
