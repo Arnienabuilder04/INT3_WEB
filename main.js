@@ -87,8 +87,40 @@ const cardCheckerFive = () => {
   document.querySelector('.card__five').classList.add('hide');
   document.querySelector('.awnser__five').removeEventListener('click', cardCheckerFive);
 };
+const logoCheckerOne = () =>{
+  document.querySelector('.louise__three--image--wrong_one').src ="./assets/logo_one_a.png"
+  document.querySelector('.emblem__feedback').innerHTML = `You picked the wrong emblem, try again!`
+
+  setTimeout(() => { 
+    document.querySelector('.louise__three--image--wrong_one').classList.add('hide')
+    ; }, 1000)
+}
+
+const logoCheckerTwo = () => {
+  document.querySelector('.louise__three--image--right').src = "./assets/logo_two_a.png"
+  document.querySelector('.louise__three--image--wrong_two').classList.add('hide')
+  document.querySelector('.louise__three--image--wrong_one').classList.add('hide')
+  setTimeout(() => {
+    document.querySelector('.emblem__feedback').innerHTML = `This is indeed the right emblem, good job!`
+      ;
+  }, 1000)
+}
+
+const logoCheckerThree = () => {
+  document.querySelector('.louise__three--image--wrong_two').src = "./assets/logo_three_a.png"
+  document.querySelector('.emblem__feedback').innerHTML = `You picked the wrong emblem, try again!`
+  setTimeout(() => {
+    document.querySelector('.louise__three--image--wrong_two').classList.add('hide')
+      ;
+  }, 1000)
+}
 
 const init = () => {
+  document.querySelector('.louise__three--image--wrong_one').addEventListener('click', logoCheckerOne);
+  document.querySelector('.louise__three--image--right').addEventListener('click', logoCheckerTwo);
+  document.querySelector('.louise__three--image--wrong_two').addEventListener('click', logoCheckerThree);
+
+
   document.querySelector('.awnser__one').addEventListener('click', cardCheckerOne);
   document.querySelector('.hamburger').addEventListener('click', checkNavigation);
   textAnimator();
