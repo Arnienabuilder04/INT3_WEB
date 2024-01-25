@@ -178,9 +178,7 @@ const awnserChecker = () => {
 };
 
 const documentCheckerOne = () => {
-  document.querySelector('.document--image--wrong_one').src = "./assets/logo_one_a.png"
   document.querySelector('.document__feedback').innerHTML = `You picked the wrong document, try again!`
-
   setTimeout(() => {
     document.querySelector('.document--image--wrong_one').classList.add('hide')
       ;
@@ -188,24 +186,31 @@ const documentCheckerOne = () => {
 }
 
 const documentCheckerTwo = () => {
-  document.querySelector('.document--image--right').src = "./assets/logo_two_a.png"
-  document.querySelector('.document--image--wrong_two').classList.add('hide')
-  document.querySelector('.document--image--wrong_one').classList.add('hide')
+  document.querySelector('.document__feedback').innerHTML = `This is indeed the right document, good job!`
   setTimeout(() => {
-    document.querySelector('.document__feedback').innerHTML = `This is indeed the right document, good job!`
-      ;
+    document.querySelector('.document--image--wrong_two').classList.add('hide')
+    document.querySelector('.document--image--wrong_one').classList.add('hide')  ;
   }, 1000)
 }
 
 const documentCheckerThree = () => {
-  document.querySelector('.document--image--wrong_two').src = "./assets/logo_three_a.png"
   document.querySelector('.document__feedback').innerHTML = `You picked the wrong document, try again!`
   setTimeout(() => {
     document.querySelector('.document--image--wrong_two').classList.add('hide')
       ;
   }, 1000)
 }
-
+const landscapeAnimator = () =>{
+  gsap.to('.landscape__animation', {
+    backgroundPosition: "right",
+    scrollTrigger: {
+      trigger: '.landscape__animation',
+      start: 'top 0%',
+      end: 'bottom 0%',
+      scrub:1,
+    },
+  });
+}
 const init = () => {
  
   document.querySelector('.louise__three--image--wrong_one').addEventListener('click', logoCheckerOne);
@@ -221,9 +226,9 @@ const init = () => {
   document.querySelector('.hamburger').addEventListener('click', checkNavigation);
 
   document.querySelector('.links').addEventListener('click', checkNavigation);
-
-  worldAnimator()
-  dishAnimator()
+  landscapeAnimator();
+  worldAnimator();
+  dishAnimator();
   textAnimator();
   heroAnimator();
   personLayer();
@@ -231,3 +236,6 @@ const init = () => {
 };
 
 init();
+
+
+
