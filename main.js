@@ -1,18 +1,18 @@
 
-const heroAnimator = () =>{
+const heroAnimator = () => {
   gsap.timeline().from(".hero_button", 1.8, {
-    opacity:0,
-    y: 20, 
+    opacity: 0,
+    y: 20,
     ease: "sine.in",
     delay: 1,
   })
 }
 
-const textAnimator = () =>{
+const textAnimator = () => {
   const persons = document.querySelectorAll('.text');
 
   persons.forEach((person, index) => {
-    const direction = index % 2 === 0 ? -1 : 1; 
+    const direction = index % 2 === 0 ? -1 : 1;
     gsap.from(person, {
       opacity: 0,
       x: 100 * direction,
@@ -20,35 +20,35 @@ const textAnimator = () =>{
       scrollTrigger: {
         trigger: person,
         start: 'top 80%',
-        end: 'top 50%', 
+        end: 'top 50%',
       },
     });
   });
 }
-const worldAnimator = () =>{
+const worldAnimator = () => {
+  // return;
   let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.world',
-        start: 'top 50%',
-        end: 'top 0%',
-        transformOrigin: '50% 50%',
-        pin: true,
-        scrub:1,
-        pinSpacing: true,
-      },
+    scrollTrigger: {
+      trigger: '.world',
+      start: 'top 50%',
+      end: 'top 0%',
+      transformOrigin: '50% 50%',
+      pin: true,
+      scrub: 1,
+      pinSpacing: true,
+    },
   });
   tl.to(".world>img", {
-    duration:20,
     rotation: -220,
   });
-  tl.to(".world>img", {
-    duration: 2,
-    y: 500,
-  });
+  // tl.to(".world>img", {
+  //   duration: 2,
+  //   y: 500,
+  // });
 }
-const dishAnimator = () =>{
+const dishAnimator = () => {
   const dishes = document.querySelectorAll('.dish');
-  dishes.forEach((dish) =>{
+  dishes.forEach((dish) => {
     gsap.from(dish, {
       opacity: 0,
       y: 100,
@@ -61,7 +61,7 @@ const dishAnimator = () =>{
     });
   }
   )
-  
+
 }
 
 
@@ -155,18 +155,18 @@ const cardCheckerFive = () => {
 
 };
 const yourFunction = (event) => {
-  if(event.target.classList.contains('awnser__correct')){
+  if (event.target.classList.contains('awnser__correct')) {
     awnserChecker()
     console.log('correct')
-  }else{
+  } else {
     console.log('incorrect')
   }
 }
 
 const elements = document.querySelectorAll('.awnser');
-  elements.forEach(element => {
-    element.addEventListener('click', yourFunction);
-  });
+elements.forEach(element => {
+  element.addEventListener('click', yourFunction);
+});
 
 let i = 0;
 
@@ -189,7 +189,7 @@ const documentCheckerTwo = () => {
   document.querySelector('.document__feedback').innerHTML = `This is indeed the right document, good job!`
   setTimeout(() => {
     document.querySelector('.document--image--wrong_two').classList.add('hide')
-    document.querySelector('.document--image--wrong_one').classList.add('hide')  ;
+    document.querySelector('.document--image--wrong_one').classList.add('hide');
   }, 1000)
 }
 
@@ -200,19 +200,19 @@ const documentCheckerThree = () => {
       ;
   }, 1000)
 }
-const landscapeAnimator = () =>{
+const landscapeAnimator = () => {
   gsap.to('.landscape__animation', {
-    backgroundPosition: "right",
+    backgroundPosition: "100% 0",
     scrollTrigger: {
       trigger: '.landscape__animation',
-      start: 'top 0%',
-      end: 'bottom 0%',
-      scrub:1,
+      start: 'top 60%',
+      end: 'bottom 20%',
+      scrub: 1,
     },
   });
 }
 const init = () => {
- 
+
   document.querySelector('.louise__three--image--wrong_one').addEventListener('click', logoCheckerOne);
   document.querySelector('.louise__three--image--right').addEventListener('click', logoCheckerTwo);
   document.querySelector('.louise__three--image--wrong_two').addEventListener('click', logoCheckerThree);
@@ -220,7 +220,7 @@ const init = () => {
   document.querySelector('.document--image--wrong_one').addEventListener('click', documentCheckerOne);
   document.querySelector('.document--image--right').addEventListener('click', documentCheckerTwo);
   document.querySelector('.document--image--wrong_two').addEventListener('click', documentCheckerThree);
-  
+
   document.querySelector('.awnser__one').addEventListener('click', cardCheckerOne);
 
   document.querySelector('.hamburger').addEventListener('click', checkNavigation);
