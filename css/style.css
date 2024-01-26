@@ -794,3 +794,17 @@ header{
   max-width: 30rem;
   width: 100vw;
 }
+/*----------------destination-----------------*/
+.destination__image{
+  max-width: 30rem;
+  width: 90vw;
+}
+
+
+
+/*----------------destination-----------------*/
+.meeting__image{
+  max-width: 30rem;
+  width: 80vw;
+}
+
