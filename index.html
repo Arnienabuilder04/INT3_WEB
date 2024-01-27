@@ -19,8 +19,31 @@
 <body>
   <header>
     <nav>
-      <img src="./assets/TW_logo.svg" alt="">
-      <img src="./assets/hamburger.svg" class="hamburger"></img>
+      <div class="mobile__nav">
+        <img src="./assets/TW_logo.svg" alt="">
+        <img src="./assets/hamburger.svg" class="hamburger"></img>
+      </div>
+      <div class="desktop__nav">
+        <img src="./assets/TW_logo.svg" alt="">
+        <div class="chapters">
+          <p>chapters</p>
+          <p class="arrow">↓</p>
+          <div class="chapter__list">
+            <ul class="links__desktop">
+              <li>chapter 1</li>
+              <li> chapter 2</li>
+              <li> chapter 3</li>
+              <li> chapter 4</li>
+            </ul>
+          </div>
+        </div>
+        
+        <ul>
+          <li class="hide">FR</li>
+          <li class="hide">NL</li>
+          <li>EN</li>
+        </ul>
+      </div>
     </nav>
     <div class="links">
       <a href="#chapter__one">chapter 1<br><span class="chapter_title">On Y va!</span></a>
@@ -308,16 +331,22 @@
           </p>
           <img class="destination__image destination__image--two" src="./assets/illustration_since.png" alt="">
         </div>
-       
-        <p class="destination__info destination__info--two">The Taurus Express first took us to Tripoli in Lebanon.
-          Rolls Royce buses drove us on to Haifa, Palestine. Then we
-          got
-          back on the train to Kantara on the Suez Canal, where we boarded a ferry. One last train brought us to Cairo.
-          So the
-          whole journey from Paris to our final destination took 4 trains, 2 ships, one bus and 6 days. This day and age
-          that
-          seems unthinkable, but at the time it was really fast!
-        </p>
+        <img class="rock" src="./assets/rock_one.png" alt="">
+        <div class="map">
+           <p class="destination__info destination__info--two">The Taurus Express first took us to Tripoli in Lebanon.
+             Rolls Royce buses drove us on to Haifa, Palestine. Then we
+             got
+             back on the train to Kantara on the Suez Canal, where we boarded a ferry.
+           </p>
+           <img class="canal" src="./assets/canal.png" alt="">
+           <p class="destination__info destination__info--two">
+             One last train brought us to Cairo.
+             So the
+             whole journey from Paris to our final destination took 4 trains, 2 ships, one bus and 6 days. This day and age
+             that
+             seems unthinkable, but at the time it was really fast!
+           </p>
+        </div>
       </div>
     </section>
     <section>

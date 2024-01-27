@@ -31,10 +31,10 @@ const worldAnimator = () => {
     scrollTrigger: {
       trigger: '.world',
       start: 'top 50%',
-      end: 'top 0%',
+      end: 'bottom 0%',
       transformOrigin: '50% 50%',
       pin: true,
-      scrub: 1,
+      scrub: 3,
       pinSpacing: true,
     },
   });
@@ -211,7 +211,18 @@ const landscapeAnimator = () => {
     },
   });
 }
+
+const checkNavigationDesktop = () => {
+  if (document.querySelector(".chapter__list").style.transform === "translateY(-30rem)") {
+    document.querySelector(".chapter__list").style.transform = "translateY(0.5rem)";
+  } else {
+    document.querySelector(".chapter__list").style.transform = "translateY(-30rem)";
+  }
+}
+
 const init = () => {
+  document.querySelector('.chapters').addEventListener('click', checkNavigationDesktop);
+  document.querySelector('.links__desktop').addEventListener('click', checkNavigationDesktop);
 
   document.querySelector('.louise__three--image--wrong_one').addEventListener('click', logoCheckerOne);
   document.querySelector('.louise__three--image--right').addEventListener('click', logoCheckerTwo);
@@ -222,7 +233,7 @@ const init = () => {
   document.querySelector('.document--image--wrong_two').addEventListener('click', documentCheckerThree);
 
   document.querySelector('.awnser__one').addEventListener('click', cardCheckerOne);
-
+  
   document.querySelector('.hamburger').addEventListener('click', checkNavigation);
 
   document.querySelector('.links').addEventListener('click', checkNavigation);

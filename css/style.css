@@ -42,7 +42,7 @@ body {
 
 /*----------------navigation-----------------*/
 
-nav {
+.mobile__nav {
   position: fixed;
   z-index: 4;
   height: 4rem;
@@ -54,20 +54,94 @@ nav {
   background-color: rgba(238, 230, 219, .28);
 }
 
-nav>img {
+.mobile__nav>img {
   max-width: 3rem;
   margin-left: 5vw;
   margin-right: 5vw;
 }
+.desktop__nav{
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  display: none;
+  background-color: var(--main-blue);
+  width: 100vw;
+  height: fit-content;
+  display:row ;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.desktop__nav>img{
+  max-width: 3rem;
+}
+.desktop__nav>p {
+  
 
+}
+.desktop__nav>ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+.desktop__nav>ul>li {
+padding: 0.5rem;
+background-color: white;
+color: var(--main-blue);
+border-radius: 1rem;
+}
+.arrow{
+  transition: transform 0.5s ease;
+}
+.chapters{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  padding: 0.5rem 2rem;
+}
+.chapters:hover,.chapters:active{
+  color: #484387;
+  background-color: var(--light-gold);
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+
+}
+.chapter__list{
+  color: white;
+  top: 3rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-blue);
+  align-items: center;
+  justify-content: center;
+  width: 25vw;
+  transform: translateY(-30rem);
+  transition: transform 0.5s ease;
+}
+.chapter__list>ul>li{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+}
+.chapter__list>ul>li:hover,.chapter__list>ul>li:active {
+  background-color: var(--light-gold);
+  color: #484387;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+}
 .hamburger {
   transition: transform 0.5s ease;
 }
-
 .hamburger:hover {
   cursor: pointer;
 }
-
 .links {
   padding-top: 6rem;
   position: fixed;
@@ -704,7 +778,7 @@ header {
   width: 100vw;
   max-width: 50rem;
   background-color: var(--main-red);
-  padding-top: 2rem;
+  margin-top: -5rem;
   padding-bottom: 2rem;
 }
 .menu{
@@ -976,7 +1050,7 @@ header {
   align-items: center;
   justify-content: center;
 
-  margin-top: 2rem;
+  margin-top: 0rem;
   width: 100vw;
 }
 .destination__info--one{
@@ -1115,7 +1189,24 @@ footer{
 .logo>img{
   width:10vw;
 }
+.map{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: var(--main-red);
+  width: 100vw;
+}
+.map>p{
 
+}
+.rock,.canal{
+  width: 100vw;
+}
+.rock{
+  margin-bottom: -0.5rem;
+}
 
 
 
@@ -1137,7 +1228,12 @@ footer{
 }
 
 @media (min-width: 678px) {
- 
+ .mobile__nav{
+  display: none;
+ }
+ .desktop__nav {
+   display: flex;
+ }
  
   .footer__two{
     flex-direction: row;
