@@ -1,12 +1,5 @@
 
-const heroAnimator = () => {
-  gsap.timeline().from(".hero_button", 1.8, {
-    opacity: 0,
-    y: 20,
-    ease: "sine.in",
-    delay: 1,
-  })
-}
+
 
 const textAnimator = () => {
   const persons = document.querySelectorAll('.text');
@@ -26,7 +19,6 @@ const textAnimator = () => {
   });
 }
 const worldAnimator = () => {
-  // return;
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.world',
@@ -41,10 +33,6 @@ const worldAnimator = () => {
   tl.to(".world>img", {
     rotation: -220,
   });
-  // tl.to(".world>img", {
-  //   duration: 2,
-  //   y: 500,
-  // });
 }
 const dishAnimator = () => {
   const dishes = document.querySelectorAll('.dish');
@@ -200,17 +188,7 @@ const documentCheckerThree = () => {
       ;
   }, 1000)
 }
-const landscapeAnimator = () => {
-  gsap.to('.landscape__animation', {
-    backgroundPosition: "100% 0",
-    scrollTrigger: {
-      trigger: '.landscape__animation',
-      start: 'top 60%',
-      end: 'bottom 20%',
-      scrub: 1,
-    },
-  });
-}
+
 
 const checkNavigationDesktop = () => {
   if (document.querySelector(".chapter__list").style.transform === "translateY(-30rem)") {
@@ -219,8 +197,23 @@ const checkNavigationDesktop = () => {
     document.querySelector(".chapter__list").style.transform = "translateY(-30rem)";
   }
 }
+const landscapeAnimator = () => {
+  gsap.to('.landscape__animation', {
+    backgroundPosition: "100% 0",
+    scrollTrigger: {
+      trigger: '.landscape__animation--train',
+      start: 'center 80%',
+      end: 'center 20%',
+      scrub: 3,
+    },
+  });
+}
+document.addEventListener('DOMContentLoaded', landscapeAnimator)
 
 const init = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  document.querySelector(".chapter__list").style.transform = "translateY(-30rem)";
+
   document.querySelector('.chapters').addEventListener('click', checkNavigationDesktop);
   document.querySelector('.links__desktop').addEventListener('click', checkNavigationDesktop);
 
@@ -237,13 +230,11 @@ const init = () => {
   document.querySelector('.hamburger').addEventListener('click', checkNavigation);
 
   document.querySelector('.links').addEventListener('click', checkNavigation);
-  landscapeAnimator();
+
   worldAnimator();
   dishAnimator();
   textAnimator();
-  heroAnimator();
   personLayer();
-  gsap.registerPlugin(ScrollTrigger);
 };
 
 init();

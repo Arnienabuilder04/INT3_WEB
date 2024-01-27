@@ -28,16 +28,15 @@
         <div class="chapters">
           <p>chapters</p>
           <p class="arrow">↓</p>
-          <div class="chapter__list">
-            <ul class="links__desktop">
-              <li>chapter 1</li>
-              <li> chapter 2</li>
-              <li> chapter 3</li>
-              <li> chapter 4</li>
-            </ul>
+        </div>
+        <div class="chapter__list">
+          <div class="links__desktop">
+            <a href="#chapter__one" class="changer">chapter 1</a>
+            <a href="chapter__two" class="changer"> chapter 2</a>
+            <a href="chapter__three" class="changer"> chapter 3</a>
+            <a href="chapter__four" class="changer"> chapter 4</a>
           </div>
         </div>
-        
         <ul>
           <li class="hide">FR</li>
           <li class="hide">NL</li>
@@ -62,9 +61,22 @@
   <main>
     <section>
       <div class="hero">
+        <h1 class="hidden">the orient express</h1>
         <dotlottie-player class="hero_lottie" src="https://lottie.host/165f806b-6813-498a-93ed-18f5cfb33126/jmZKkjkkHN.json"
           background="transparent" speed="1" autoplay></dotlottie-player>
-        <a class="hero_button" href="#">departure</a>
+          <div>
+            <img class="hero_two" src="./assets/hero_two.png" alt="">
+            <img class="hero_three" src="./assets/hero_three.png" alt="">
+            <img class="hero_four" src="./assets/hero_four.png" alt="">
+            <img class="hero_five" src="./assets/hero_five.png" alt="">
+            <img class="hero_six" src="./assets/hero_six.png" alt="">
+            <img class="hero_seven" src="./assets/hero_seven.png" alt="">
+          </div>
+      </div>
+      <div class="intro_rock">
+        <img src="./assets/rock_one_intro.png" alt="">
+        <img src="./assets/rock_two.png" alt="">
+
       </div>
       <div class="intro">
           <p>I remember that I could hardly believe my eyes. There we were, on the platform of the <span class="blue_text">Gare de Lyon</span> in Paris.</p>
@@ -94,11 +106,14 @@
       </div>
       <div class="convo">
         <img class="decor" src="./assets/decor.svg" alt="">
-        <img class="year" src="./assets/illustration_year.png" alt="">
-        <div class="convo__intro">
-          <p>That year the Simplon Orient Express was at the top of it's fame.<br><br>
-          Behind me I overheard two gentlemen talking enthusiastically about:</p>
+        <div class="convo__context">
+          <img class="year" src="./assets/illustration_year.png" alt="">
+          <div class="convo__intro">
+            <p>That year the <span class="gold_text">Simplon Orient Express</span> was at the top of it's fame.<br><br>
+              Behind me I overheard two gentlemen talking enthusiastically about:</p>
+          </div>
         </div>
+        
         <div class="convo__container">
           <img  class="convo__talker" src="./assets/illustration_personOne.png" alt="">
           <img class="convo__detail" src="./assets/detail_two.svg" alt="">
@@ -125,8 +140,8 @@
         <img class="departure--group departure--group__two" src="./assets/departure_group_two.png" alt="">
         <img class="departure--group departure--group__three" src="./assets/departure_group_three.png" alt="">
       </div>
-      <div class="train_info">
-        <div class="train_info--intro">
+      <div class="train__info">
+        <div class="train__info--intro">
           <p>
             It was busy on the platform, but that was quite alright. Even the most imaginative among you would not
             believe what was going on there. <span class="gold_text">Such a varied range of people!</span>
@@ -183,7 +198,7 @@
           <p class="result hide"></p>
           <img class="text__detail" src="./assets/detail_three.svg" alt="">
         </div>
-        <div class="people_info">
+        <div class="people__info">
           <div>
             <p>
               There were <span class="gold_text">diplomats</span> and <span class="gold_text">state leaders</span>,
@@ -292,10 +307,13 @@
           <img class="text__detail text__detail--documents" src="./assets/detail_three.svg" alt="">
         </div>
       </div>
-      <div class="landscape">
+    </section>
+
+    <section class="landscape">
         <div class="landscape__animation">
           <img class="landscape__animation--train" src="./assets/view_window.png" alt="">
         </div>
+      </div>
         <div class="landscape__info">
           <p>It was exciting to watch the changing landscape. The further we went, the more exotic the surroundings
             became.</p>
@@ -309,8 +327,8 @@
           </div>
           <img class="arrival__image" src="./assets/illustration_arrival.png" alt="">
         </div>
-      </div>
     </section>
+
     <section>
       <div id="chapter__three" class="chapter chapter__three">
         <h2>A bridge between East and West</p>
@@ -372,12 +390,24 @@
         </p>
       </div>
     </section>
-    <section>
-      <div>
+    <section class="other">
+      <div class="previous">
         <p>previous story</p>
+        <img src="./assets/previous.jpeg" alt="">
+        <div>
+          <p class="story__title">Down by the station</p>
+          <p class="story__author">Jef Baert</p>
+        </div>
+
       </div>
-      <div>
+
+      <div class="previous">
         <p>next story</p>
+        <img src="./assets/next.jpeg" alt="">
+        <div>
+          <p class="story__title">In the Telemans' railway cottage</p>
+          <p class="story__author">Guido telemans</p>
+        </div>
       </div>
     </section>
 
@@ -385,12 +415,12 @@
 
   <footer>
     <div class="footer__one">
-      <ul>
-        <li>chapter 1</li>
-        <li>chapter 2</li>
-        <li>chapter 3</li>
-        <li>chapter 4</li>
-      </ul>
+      <div>
+        <a href="chapter__one" class="changer">chapter 1</a>
+        <a href="chapter__two" class="changer">chapter 2</a>
+        <a href="chapter__three" class="changer">chapter 3</a>
+        <a href="chapter__four" class="changer">chapter 4</a>
+      </div>
     </div>
 
     <div class="line"></div>
