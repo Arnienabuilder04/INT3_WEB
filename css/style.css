@@ -913,6 +913,7 @@ header {
   flex-wrap: wrap;
   gap: 2rem;
   width: 95vw;
+  padding-bottom: 2rem;
 }
 .cutlery{
   width: 100vw;
@@ -1034,7 +1035,7 @@ header {
 }
 
 .text__detail--documents {
-  max-width: 100%;
+  max-width: 50rem;
 }
 
 .documents__find {
@@ -1209,8 +1210,8 @@ header {
   margin-bottom: 2rem;
   width: 90vw;
   max-width: 50rem;
-
 }
+
 .destination__two>p{
     width: 90vw;
     max-width: 30rem;
@@ -1222,11 +1223,56 @@ header {
 
 
 /*----------------meeting-----------------*/
-.meeting__image {
-  max-width: 30rem;
-  width: 80vw;
+.meeting{
+  background-color: var(--main-blue);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+.meeting__image {
+  max-width: 15rem;
+  width: 80vw;
+  margin-bottom: -5rem;
+}
+.meeting__info--one{
+  margin-top: 2rem;
+  text-align: center;
+  max-width: 90vw;
+}
+.meeting__info--three {
+  margin-top: 2rem;
+  text-align: center;
+  max-width: 90vw;
+}
+.meeting__info--four {
+  margin-top: 2rem;
+  text-align: center;
+  max-width: 90vw;
+  margin-bottom: 2rem;
+}
+.lottie__stuck{
+  align-self: flex-end;
+  width: 100vw;
+}
+.meeting__info--two{
+  background-color: white;
+  color: black;
+  border-radius: 1rem;
+  text-align: center;
+  max-width: 50rem;
+  width: 90vw;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.meeting__info--two>h3{
+  font-family: "Italianno";
+  color: var(--dark-gold);
+  font-size: 4rem;
+}
 /*----------------footer-----------------*/
 footer{
   color: white;
@@ -1235,6 +1281,13 @@ footer{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.temperature{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  background-color: var(--main-red);
+  padding: 1rem;
+  border-radius: 10rem;
 }
 .footer__one>div {
   font-size: 2rem;
@@ -1707,7 +1760,19 @@ font-weight: 600;
   
 
 }
+
 @media (min-width: 1600px) {
+
+  .map>:nth-child(3) {
+    margin-left: 20vw;
+  }
+  
+    .map>:nth-child(1) {
+      margin-right: 20vw;
+    }
+  .destination__two {
+      margin-top: -25rem;
+    }
   .year{
     margin-left:0vw;
   }

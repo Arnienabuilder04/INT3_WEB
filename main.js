@@ -258,9 +258,32 @@ const cardCheckerFive = () => {
   document.querySelector('.booking').style.transform = "translateY(12rem)";
 
 };
-
+  
 document.addEventListener('DOMContentLoaded', landscapeAnimator)
 
+const temperatureAnimator = () => {
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.temperature',
+      start: 'top 70%',
+      end: 'bottom 30%',
+      scrub: 1,
+      pinSpacing: true,
+    },
+  });
+  tl.to(".temperature", {
+    scale:1.1,
+    innerHTML: '-1°C',
+  });
+  
+  tl.to(".temperature", {
+    color:'black',
+    backgroundColor:'#FEFEFE',
+    scale: 2,
+    innerHTML: '-10°C',
+
+  });
+}
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   document.querySelector(".chapter__list").style.transform = "+ translateY(-30rem)";
@@ -286,6 +309,7 @@ const init = () => {
   dishAnimator();
   textAnimator();
   personLayer();
+  temperatureAnimator()
 };
 
 init();
