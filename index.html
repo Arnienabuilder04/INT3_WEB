@@ -20,11 +20,11 @@
   <header>
     <nav>
       <div class="mobile__nav">
-        <img src="./assets/TW_logo.svg" alt="">
+        <a href="#"><img class="TW_logo"  src="./assets/TW_logo.svg" alt=""></a>
         <img src="./assets/hamburger.svg" class="hamburger"></img>
       </div>
       <div class="desktop__nav">
-        <img src="./assets/TW_logo.svg" alt="">
+        <a><img class="TW_logo" src="./assets/TW_logo.svg" alt=""></a>
         <div class="chapters">
           <p>chapters</p>
           <p class="arrow">↓</p>
@@ -32,9 +32,9 @@
         <div class="chapter__list">
           <div class="links__desktop">
             <a href="#chapter__one" class="changer">chapter 1</a>
-            <a href="chapter__two" class="changer"> chapter 2</a>
-            <a href="chapter__three" class="changer"> chapter 3</a>
-            <a href="chapter__four" class="changer"> chapter 4</a>
+            <a href="#chapter__two" class="changer"> chapter 2</a>
+            <a href="#chapter__three" class="changer"> chapter 3</a>
+            <a href="#chapter__four" class="changer"> chapter 4</a>
           </div>
         </div>
         <ul>
@@ -115,7 +115,7 @@
         </div>
         
         <div class="convo__container">
-          <img  class="convo__talker" src="./assets/illustration_personOne.png" alt="">
+          <img  class="convo__talker convo__talker--one" src="./assets/illustration_personOne.png" alt="">
           <img class="convo__detail" src="./assets/detail_two.svg" alt="">
           <div class="convo__exchange">
             <li class=" text text__blue"><p>Excited about the upcoming adventure on the Orient Express?</p></li>
@@ -125,7 +125,7 @@
             <li class=" text text__blue"><p>Stepping into that bygone era will be an unforgettable experience.</p></li>
           </div>
           <img class="convo__detail" src="./assets/detail_two.svg" alt="">
-          <img class="convo__talker" src="./assets/illustration_personTwo.png" alt="">
+          <img class="convo__talker convo__talker--two" src="./assets/illustration_personTwo.png" alt="">
         </div>
         </div>
       </div>
@@ -147,56 +147,61 @@
             believe what was going on there. <span class="gold_text">Such a varied range of people!</span>
           </p>
         </div>
-        <div class="cards-container">
-          <img class="text__detail" src="./assets/detail_three.svg" alt="">
-          <h3>Do you think they were on the Orient Express?</h3>
+        <div class="cards__container">
+          <img class="text__detail--card" src="./assets/detail_three.svg" alt="">
+          <div>
+            <h3>Do you think they were on the Orient Express?</h3>
+                      <p class="result hide"></p>
 
-          <div class="card card__one ">
-            <p class="card__title">artists</p>
-            <img src="./assets/person_one.png" alt="">
-            <div class="awnser__one">
-              <p class="awnser  awnser__correct">Yes</p>
-              <p class="awnser  awnser__incorrect">No</p>
+            <div class="card card__one ">
+              <p class="card__title">artists</p>
+              <div class="awnser__one">
+                <p class="awnser  awnser__correct">Yes</p>
+                <p class="awnser  awnser__incorrect">No</p>
+              </div>
+            </div>
+            
+            <div class="card card__two hide">
+              <p class="card__title">clowns</p>
+              <div class="awnser__two">
+                <p class="awnser awnser__incorrect">Yes</p>
+                <p class="awnser awnser__correct">No</p>
+              </div>
+            </div>
+            
+            <div class="card card__three hide">
+              <p class="card__title">state leaders</p>
+              <div class="awnser__three">
+                <p class="awnser  awnser__correct">Yes</p>
+                <p class="awnser  awnser__incorrect">No</p>
+              </div>
+            </div>
+            
+            <div class="card card__four hide">
+              <p class="card__title">traders</p>
+              <div class="awnser__four">
+                <p class="awnser awnser__correct">Yes</p>
+                <p class="awnser awnser__incorrect">No</p>
+              </div>
+            </div>
+            
+            <div class="card card__five hide">
+              <p class="card__title">shoe cleaners</p>
+              <div class="awnser__five">
+                <p class="awnser awnser__incorrect">Yes</p>
+                <p class="awnser awnser__correct">No</p>
+              </div>
             </div>
           </div>
-
-          <div class="card card__two hide">
-            <p class="card__title">clowns</p>
-            <img src="./assets/person_one.png" alt="">
-            <div class="awnser__two">
-              <p class="awnser awnser__incorrect">Yes</p>
-              <p class="awnser awnser__correct">No</p>
-            </div>
+          <img class="person__item person__item--one" src="./assets/item_one.png" alt="">
+          <img class="person__item person__item--two" src="./assets/item_two.png" alt="">
+          <img class="person__item person__item--three" src="./assets/item_three.png" alt="">
+          <img class="person__item person__item--four" src="./assets/item_four.png" alt="">
+          <img class="person__item person__item--five" src="./assets/item_five.png" alt="">
+          <div class="booking">
+            <p>If you also want to be on the Orient Express?<br><br><span class="booking_text">Book a ticket now!</span><br><br>and check out the replica in our museum.</p>
+            <img src="./assets/book_one.png" alt="">
           </div>
-
-          <div class="card card__three hide">
-            <p class="card__title">state leaders</p>
-            <img src="./assets/person_two.png" alt="">
-            <div class="awnser__three">
-              <p class="awnser  awnser__correct">Yes</p>
-              <p class="awnser  awnser__incorrect">No</p>
-            </div>
-          </div>
-
-          <div class="card card__four hide">
-            <p class="card__title">traders</p>
-            <img src="./assets/person_three.png" alt="">
-            <div class="awnser__four">
-              <p class="awnser awnser__correct">Yes</p>
-              <p class="awnser awnser__incorrect">No</p>
-            </div>
-          </div>
-
-          <div class="card card__five hide">
-            <p class="card__title">shoe cleaners</p>
-            <img src="./assets/person_one.png" alt="">
-            <div class="awnser__five">
-              <p class="awnser awnser__incorrect">Yes</p>
-              <p class="awnser awnser__correct">No</p>
-            </div>
-          </div>
-          <p class="result hide"></p>
-          <img class="text__detail" src="./assets/detail_three.svg" alt="">
         </div>
         <div class="people__info">
           <div>
@@ -283,10 +288,13 @@
             and night.</p>
           <img class="documents__intro--image_two" src="./assets/side_decoration.svg" alt="">
         </div>
-        <div class="documents__text_one">
+        <div class="documents__text--one">
           <p>I had expected it to be a tiring experience but after the first night I was pleasantly surprised at the
             <span class="blue_text">ease and comfort</span>
             of the trip.</p>
+            
+            <dotlottie-player class="middle__lottie" src="https://lottie.host/b8b8fbce-fd85-494e-ba87-1c4f81c6d347/dOVhfXoFjn.json"
+              background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
         </div> 
         <div class="documents__find">
           <div class="documents__find--options">
@@ -302,7 +310,7 @@
             <img class="text__detail" src="./assets/detail_one.svg" alt="">
           </div>
         </div>
-        <div class="documents__text_two">
+        <div class="documents__text--two">
           <p>That meant they didn't need to wake us when we passed through customs at a border.</p>
           <img class="text__detail text__detail--documents" src="./assets/detail_three.svg" alt="">
         </div>
@@ -372,7 +380,8 @@
         <h2>I could have met Agatha Christie!</h2>
       </div>
       <div class="meeting">
-        <p class="meeting__info meeting__info--one">The reason why I was so terrified beforehand was because I'd heard
+        <p class="meeting__info meeting__info--one">
+          The reason why I was so terrified beforehand was because I'd heard
           the story of the stranded Orient Express. That
           particular train got stuck 130 kilometres from Istanbul in a heavy snowstorm. The train remained there for 5
           days, until
@@ -406,7 +415,7 @@
         <img src="./assets/next.jpeg" alt="">
         <div>
           <p class="story__title">In the Telemans' railway cottage</p>
-          <p class="story__author">Guido telemans</p>
+          <p class="story__author">Guido Telemans</p>
         </div>
       </div>
     </section>
@@ -416,10 +425,10 @@
   <footer>
     <div class="footer__one">
       <div>
-        <a href="chapter__one" class="changer">chapter 1</a>
-        <a href="chapter__two" class="changer">chapter 2</a>
-        <a href="chapter__three" class="changer">chapter 3</a>
-        <a href="chapter__four" class="changer">chapter 4</a>
+        <a href="#chapter__one" class="changer">chapter 1</a>
+        <a href="#chapter__two" class="changer">chapter 2</a>
+        <a href="#chapter__three" class="changer">chapter 3</a>
+        <a href="#chapter__four" class="changer">chapter 4</a>
       </div>
     </div>
 

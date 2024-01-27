@@ -53,13 +53,12 @@ body {
   background-color: rgba(238, 230, 219, .28);
 }
 
-.mobile__nav>img {
-  width: 3rem;
+.mobile__nav>img,
+.mobile__nav>a{
   margin-left: 5vw;
   margin-right: 5vw;
 }
 .desktop__nav{
-  
   padding-left: 2vw;
   padding-right: 2vw;
   padding-top: 1vw;
@@ -73,13 +72,12 @@ body {
   justify-content: space-between;
   color: white;
 }
-.desktop__nav>img{
-  max-width: 3rem;
-}
-.desktop__nav>p {
-  
 
+.TW_logo {
+  height: 3rem;
+  margin-bottom: -2rem;
 }
+
 .desktop__nav>ul {
   display: flex;
   flex-direction: row;
@@ -88,14 +86,12 @@ body {
   gap: 5vw;
 }
 .desktop__nav>ul>li {
-padding: 0.5rem;
-background-color: white;
-color: var(--main-blue);
-border-radius: 1rem;
+  padding: 0.5rem;
+  background-color: white;
+  color: var(--main-blue);
+  border-radius: 1rem;
 }
-.arrow{
-  transition: transform 0.5s ease;
-}
+
 .chapters{
   position: relative;
   display: flex;
@@ -163,6 +159,7 @@ border-radius: 1rem;
   transition: transform 0.5s ease;
 }
 .links__desktop{
+  width: 30vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,7 +218,7 @@ header {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  height: 100dvh;
+  height: 90vh;
 }
 .hero>div{
   position: relative;
@@ -286,7 +283,7 @@ header {
   width: 70vw;
   height: 100vw;
   bottom: 0px;
-  left: -20vw;
+  left: -25vw;
   z-index: 4;
 }
 .hero_seven {
@@ -307,7 +304,6 @@ header {
 }
 
 .hero_lottie {
-  margin-top: 5rem;
   position: relative;
   width: 100vw;
   max-width: 25rem;
@@ -395,7 +391,7 @@ header {
   padding-bottom: 15rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100vw;
 }
 
@@ -433,7 +429,7 @@ header {
 
 }
 .louise__three>div>img{
-  max-width: 20rem;
+  max-width: 15rem;
   padding: 1rem;
   background-color: var(--main-blue);
   border-radius: 1rem;
@@ -671,7 +667,35 @@ header {
   justify-content: center;
   width: 100vw;
 }
+.booking_text{
+  color: var(--main-blue);
+  padding: 1rem 2rem;
+  background-color: var(--light-gold);
+  border-radius: 1rem;
+}
 
+.booking{
+  width: 10rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transform: translateY(40rem);
+  transition: transform 0.5s ease;
+}
+.booking>img{
+  width: 80vw;
+  max-width: 15rem;
+}
+.booking>p {
+  width: 80vw;
+  max-width: 30rem;
+}
 .people__info>div {
   display: flex;
   justify-content: center;
@@ -692,39 +716,63 @@ header {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-
-.cards-container {
-  z-index: 2;
-  width: 100vw;
-  height: fit-content;
-  background-color: #FEFEFE;
-  text-align: center;
+.cards__container>div{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
 }
-
-.cards-container>h3 {
+.cards__container {
+  z-index: 2;
+  width: 100vw;
+  height: 40rem;
+  background: linear-gradient(0deg, rgba(203, 203, 203, 1) 0%, rgba(254, 254, 254, 1) 10%,rgba(254, 254, 254, 1) 90%,rgba(203, 203, 203, 1) 100%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative
+}
+.person__item{
+  width: 50vw;
+  max-width: 30rem;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(40rem);
+  transition: transform 0.5s ease;
+}
+.person__item--one{
+  max-width: 10rem;
+  transform: translateY(10rem);
+}
+.person__item--two {
   width: 80vw;
   max-width: 30rem;
-  margin-top: 2rem;
+}
+.cards__container>h3 {
+  width: 80vw;
+  max-width: 30rem;
   margin-bottom: 2rem;
 }
 
 .card__title {
   color: #FFBF00;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   border: 1px solid #ccc;
-  padding: 20px;
-  margin-bottom: 20px;
   text-align: center;
   background-color: var(--main-red);
   border-radius: 1rem;
-  height: 22rem;
 }
 
 .result {
@@ -734,7 +782,12 @@ header {
   border: #BB9010 solid 0.1rem;
   border-radius: 1rem;
 }
+.text__detail--card{
+  width: 100vw;
+  max-width:50rem;
+  margin-top: 1rem;
 
+}
 .result__number {
   font-weight: 500;
   font-size: 3rem;
@@ -747,12 +800,6 @@ header {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-}
-
-.card>img {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  max-height: 10rem;
 }
 
 .hide {
@@ -920,7 +967,11 @@ header {
 .document__feedback {
   text-align: center;
 }
-
+.landscape__info>p,
+.documents__text--two>p{
+  width: 90vw;
+  max-width: 30rem;
+}
 .documents__intro {
   width: 100vw;
   overflow-x: hidden;
@@ -948,8 +999,10 @@ header {
   max-width: 30rem;
   width: 90vw;
 }
-
-.documents__text_one{
+.middle__lottie{
+  margin-top: -5rem;
+}
+.documents__text--one{
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -957,7 +1010,7 @@ header {
   align-items: center;
   max-width: 90vw;
 }
-.documents__text_two {
+.documents__text--two {
   color: white;
   text-align: center;
   display: flex;
@@ -968,14 +1021,14 @@ header {
   max-width: 90vw;
 }
 
-.documents__text_one>p {
+.documents__text--one>p {
   margin-top: 4rem;
   margin-bottom: 4rem;
   width: 90vw;
   max-width: 30rem;
 }
 
-.documents__text_two>p {
+.documents__text--two>p {
   padding-top: 2rem;
   margin: 2rem;
 }
@@ -1173,6 +1226,7 @@ header {
   max-width: 30rem;
   width: 80vw;
 }
+
 /*----------------footer-----------------*/
 footer{
   color: white;
@@ -1310,12 +1364,13 @@ footer{
   margin-bottom: -0.5rem;
 }
 .other{
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
- justify-content: center;
- align-items: center;
- gap: 5vh;
+  background-image: url('../assets/back_detail_one.png');
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5vh;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -1359,6 +1414,10 @@ font-weight: 600;
 
 
 @media (min-width: 450px) {
+  .person__item--one {
+      max-width: 10rem;
+      transform: translateY(10rem);
+    }
   body{
     font-size: 26px;
   }
@@ -1379,11 +1438,58 @@ font-weight: 600;
     margin-bottom: -3rem;
   }
 }
+@media (min-width: 540px) {
+  .person__item--two {
+      width: 60vw;
+    }
+  .person__item--one {
+      max-width: 10rem;
+      transform: translateY(10rem);
+    }
+    .person__item--four {
+      max-width: 12rem;
+    }
+    .person__item--five {
+      max-width: 15rem;
+    }
+}
 
 @media (min-width: 678px) {
-  body {
-      font-size: 28px;
+  
+
+  .person__item--two {
+      width: 50vw;
     }
+  
+    .person__item--four {
+      max-width: 50vw;
+    }
+  
+    .person__item--five {
+      max-width: 50vw;
+    }
+  .person__item {
+      left: 0;
+      margin-left: 2vw;
+      max-width: 35rem;
+    }
+    .booking {
+      left: 0;
+      margin-left: 10rem;
+    }
+
+  .person__item--one {
+      max-width: 15rem;
+      transform: translateY(10rem);
+    }
+  .hero_lottie {
+     margin-top: 10rem;
+    }
+    
+  .hero{
+      height: 100vh;
+  }
+ 
   .map>:nth-child(1) {
       max-width: 40rem;
       align-self: end;
@@ -1394,7 +1500,7 @@ font-weight: 600;
       align-self: start;
     }
   .train__info--intro {
-      height: 15rem;
+      height: 20rem;
       margin-top: 5rem;
     }
 
@@ -1406,9 +1512,7 @@ font-weight: 600;
   }
  
   
-  .train_info--intro {
-    margin-top: 10rem;
-  }
+  
   .dish>img {
     width: 30vw;
   }
@@ -1422,10 +1526,87 @@ font-weight: 600;
   .destination__image--two{
     max-width: 30vw;
   }
+    .TW_logo {
+      margin-bottom: -0.5rem;
+    }
+        .cards__container>div {
+          width: 20rem;
+          align-self: flex-end;
+          margin-right: 10vw;
+        }
 }
 
 @media (min-width: 1028px) {
- 
+  .documents__text--one{
+    flex-direction: row;
+  }
+    .documents__text--one>:nth-child(2) {
+      align-self: flex-end;
+    }
+  .result{
+    margin-top: 10rem;
+  }
+.person__item {
+    left: 0;
+    margin-left: 10vw;
+  }
+  .booking {
+      width: 10rem;
+      position: absolute;
+      bottom: 0;
+      left: 20%;
+      margin-left: -5rem;
+      transform: translateY(40rem);
+      transition: transform 0.5s ease;
+    }
+  
+  .louise{
+    grid-template-rows: repeat(3,1fr);
+  }
+  .text__detail--louise{
+    display: none;
+  }
+  .louise__three{
+    flex-direction: column;
+  }
+  .louise__three>div{
+    flex-direction: row;
+  }
+  .louise__four{
+    margin-top: 5rem;
+    grid-row: 3/4;
+    flex-direction: row;
+    gap: 5vw;
+  }
+
+  .louise__four>img{
+    max-width: 25rem;
+    margin-bottom: 2rem;
+    margin-top: 0rem;
+  }
+  
+  .intro{
+    align-items: flex-start;
+    padding-left: 10vw;
+    margin-top: 5rem;
+    margin-bottom: -5rem;
+  }
+  .louise__one{
+    justify-self: flex-end;
+    margin-right: 10vw;
+    width: 50vw;
+  }
+  .louise__two {
+    margin-top: 40vh;
+    padding-top: 10rem;
+    padding-bottom: 20rem;
+    align-items: start;
+    justify-content:  flex-start;
+    padding-left: 10vw;
+  }
+  .louise__two>p{
+    max-width: 40rem;
+  }
   .canal{
     margin-top: -6rem;
   }
@@ -1476,11 +1657,7 @@ font-weight: 600;
   .footer__two {
       flex-direction: row;
     }
-  .louise__two {
-      margin-top: 34vh;
-      padding-top: 10rem;
-      padding-bottom: 20rem;
-    }
+  
   .footer__one>div {
       grid-template-rows: repeat(1, 1fr);
       grid-template-columns: repeat(4, 1fr);
@@ -1493,22 +1670,30 @@ font-weight: 600;
       margin-right: 2rem;
     }
   .convo__container {
-      flex-direction: row-reverse;
+    margin-top: -8rem;
       max-width: 90vw;
-  
     }
-  
+  .convo__talker--one {
+    margin-left: 10vw;
+    align-self: flex-start;
+  }
+  .convo__talker--two {
+    margin-right: 10vw;
+    align-self: flex-end;
+  }
+
     .convo__detail {
       display: none;
     }
   
     .convo__talker {
-      max-width: 25vw;
+      max-width: 30vw;
     }
 
   .arrival{
+    margin-left: 5vw;
     flex-direction: row-reverse;
-    max-width: 100vw;
+    max-width: 90vw;
   }
   .arrival__text>p{
     text-align:left;
@@ -1523,6 +1708,9 @@ font-weight: 600;
 
 }
 @media (min-width: 1600px) {
+  .year{
+    margin-left:0vw;
+  }
   .train__info--intro {
       height: 20rem;
       margin-top: 30rem;
