@@ -76,15 +76,58 @@
           </div>
       </div>
       <div class="intro_rock">
-        <img src="./assets/rock_one_intro.png" alt="">
-        <img src="./assets/rock_two.png" alt="">
+        <picture>
+          <source srcset="
+                                ./assets/rock_one_intro.avif 1622w,
+                                ./assets/rock_one_intro-500.avif 500w,
+                                ./assets/rock_one_intro-750.avif 750w,
+                                ./assets/rock_one_intro-1200.avif 1200w,
+                                " sizes="100vw" type="image/avif">
+          <source srcset="
+                                ./assets/rock_one_intro.webp 1622w,
+                                ./assets/rock_one_intro-500.webp 500w,
+                                ./assets/rock_one_intro-750.webp 750w,
+                                ./assets/rock_one_intro-1200.webp 1200w,
+                                " sizes="100vw" type="image/webp">
+        <img class="rock_one_intro" src="./assets/rock_one_intro.png" alt="red contour rocks">
+        </picture>
+        <picture>
+          <source srcset="
+                                ./assets/rock_two.avif 2330w,
+                                ./assets/rock_two-500.avif 500w,
+                                ./assets/rock_two-750.avif 750w,
+                                ./assets/rock_two-1200.avif 1200w,
+                                " sizes="100vw" type="image/avif">
+          <source srcset="
+                                ./assets/rock_two.webp 2330w,
+                                ./assets/rock_two-500.webp 500w,
+                                ./assets/rock_two-750.webp 750w,
+                                ./assets/rock_two-1200.webp 1200w,
+                                " sizes="100vw" type="image/webp">
+        <img class="rock_two_intro" src="./assets/rock_two.png" alt="red countour rocks">
+        </picture>
+
 
       </div>
       <div class="intro">
           <p>I remember that I could hardly believe my eyes. There we were, on the platform of the <span class="blue_text">Gare de Lyon</span> in Paris.</p>
       </div>
       <div class="louise">
-        <img class="louise__one" src="./assets/illustration_louise.png" alt="">
+        <picture class="louise__one">
+          <source srcset="
+                          ./assets/illustration_louise.avif 1472w,
+                          ./assets/illustration_louise-500.avif 500w,
+                          ./assets/illustration_louise-750.avif 750w,
+                          ./assets/illustration_louise-1200.avif 1200w,
+                          " sizes="100vw,(min-width: 1028px) 50vw" type="image/avif">
+          <source srcset="
+                          ./assets/illustration_louise.webp 1472w,
+                          ./assets/illustration_louise-500.webp 500w,
+                          ./assets/illustration_louise-750.webp 750w,
+                          ./assets/illustration_louise-1200.webp 1200w,
+                          " sizes="100vw" type="image/webp">
+          <img  src="./assets/illustration_louise.png" alt="collage of lousie maréchal and train station">
+        </picture>
         <div class="louise__two">
           <p>I was then just a <span class="gold_text">young Parisian</span>, the governess to a rich business man's family, who
           had to go to Cairo for a while. And I was allowed to go too!</p>
@@ -93,15 +136,68 @@
           <img class="text__detail text__detail--louise" src="./assets/detail_one.svg" alt="">
           <h3>Test your knowledge. Do you know the emblem of the Orient Express?</h3>
           <div>
-            <img class="louise__three--image louise__three--image--wrong_one" src="./assets/logo_one_na.png" alt="">
-            <img class="louise__three--image louise__three--image--right" src="./assets/logo_two_na.png" alt="">
-            <img class="louise__three--image louise__three--image--wrong_two" src="./assets/logo_three_na.png" alt="">
+            <picture class="louise__three--image louise__three--image--wrong_one">
+              <source srcset="
+                              ./assets/logo_one_a.avif 699w,
+                              ./assets/logo_one_a-200.avif 200w,
+                              ./assets/logo_one_a-400.avif 400w,
+                              " sizes="30vw" type="image/avif">
+              <source srcset="
+                              ./assets/logo_one_a.webp 699w,
+                              ./assets/logo_one_a-200.webp 200w,
+                              ./assets/logo_one_a-400.webp 400w,
+                              " sizes="30vw" type="image/webp">
+            <img  src="./assets/logo_one_a.png" alt="logo of canadian express">
+            </picture>
+
+            <picture class="louise__three--image louise__three--image--right">
+              <source srcset="
+                              ./assets/logo_two_a.avif 1041w,
+                              ./assets/logo_two_a-200.avif 200w,
+                              ./assets/logo_two_a-400.avif 400w,
+                              " sizes="30vw" type="image/avif">
+              <source srcset="
+                              ./assets/logo_two_a.webp 1041w,
+                              ./assets/logo_two_a-200.webp 200w,
+                              ./assets/logo_two_a-400.webp 400w,
+                              " sizes="30vw" type="image/webp">
+            <img src="./assets/logo_two_a.png" alt="logo of orient express">
+            </picture>
+
+            <picture class="louise__three--image louise__three--image--wrong_two">
+              <source srcset="
+                              ./assets/logo_three_a.avif 219w,
+                              ./assets/logo_three_a-200.avif 200w,
+                              ./assets/logo_three_a-400.avif 400w,
+                              " sizes="30vw" type="image/avif">
+              <source srcset="
+                              ./assets/logo_three_a.webp 219w,
+                              ./assets/logo_three_a-200.webp 200w,
+                              ./assets/logo_three_a-400.webp 400w,
+                              " sizes="30vw" type="image/webp">
+            <img  src="./assets/logo_three_a.png" alt="logo of deutshe bahn">
+            </picture>
+
           </div>
           <p class="emblem__feedback">Maybe it's your lucky day!</p>
           <img class="text__detail" src="./assets/detail_one.svg" alt="">
         </div>
         <div class="louise__four">
+          <picture>
+            <source srcset="
+                                          ./assets/illustration_clock.avif 1475w,
+                                          ./assets/illustration_clock-500.avif 500w,
+                                          ./assets/illustration_clock-750.avif 750w,
+                                          ./assets/illustration_clock-1200.avif 1200w,
+                                          " sizes="100vw" type="image/avif">
+            <source srcset="
+                                          ./assets/illustration_clock.webp 1475w,
+                                          ./assets/illustration_clock-500.webp 500w,
+                                          ./assets/illustration_clock-750.webp 750w,
+                                          ./assets/illustration_clock-1200.webp 1200w,
+                                          " sizes="100vw" type="image/webp">
           <img src="./assets/illustration_clock.png" alt="">
+          </picture>
           <p>It was <span class="gold_text">nine o'clock</span> in the evening and the train was due to leave half an hour later.
           </p>
         </div>
@@ -109,7 +205,21 @@
       <div class="convo">
         <img class="decor" src="./assets/decor.svg" alt="">
         <div class="convo__context">
+          <picture>
+            <source srcset="
+                            ./assets/illustration_year.avif 2560w,
+                            ./assets/illustration_year-500.avif 500w,
+                            ./assets/illustration_year-750.avif 750w,
+                            ./assets/illustration_year-1200.avif 1200w,
+                            " sizes="100vw" type="image/avif">
+            <source srcset="
+                            ./assets/illustration_year.webp 2560w,
+                            ./assets/illustration_year-500.webp 500w,
+                            ./assets/illustration_year-750.webp 750w,
+                            ./assets/illustration_year-1200.webp 1200w,
+                            " sizes="100vw" type="image/webp">
           <img class="year" src="./assets/illustration_year.png" alt="">
+          </picture>
           <div class="convo__intro">
             <p>That year the <span class="gold_text">Simplon Orient Express</span> was at the top of it's fame.<br><br>
               Behind me I overheard two gentlemen talking enthusiastically about:</p>
@@ -117,7 +227,22 @@
         </div>
         
         <div class="convo__container">
-          <img  class="convo__talker convo__talker--one" src="./assets/illustration_personOne.png" alt="">
+          <picture>
+            <source srcset="
+                            ./assets/illustration_personOne.avif 1886w,
+                            ./assets/illustration_personOne-500.avif 500w,
+                            ./assets/illustration_personOne-750.avif 750w,
+                            ./assets/illustration_personOne-1200.avif 1200w,
+                            " sizes="100vw" type="image/avif">
+            <source srcset="
+                            ./assets/illustration_personOne.webp 1886w,
+                            ./assets/illustration_personOne-500.webp 500w,
+                            ./assets/illustration_personOne-750.webp 750w,
+                            ./assets/illustration_personOne-1200.webp 1200w,
+                            " sizes="100vw" type="image/webp">
+          <img class="convo__talker convo__talker--one" src="./assets/illustration_personOne.png" alt="">
+          </picture>
+
           <img class="convo__detail" src="./assets/detail_two.svg" alt="">
           <div class="convo__exchange">
             <li class=" text text__blue"><p>Excited about the upcoming adventure on the Orient Express?</p></li>
@@ -127,7 +252,21 @@
             <li class=" text text__blue"><p>Stepping into that bygone era will be an unforgettable experience.</p></li>
           </div>
           <img class="convo__detail" src="./assets/detail_two.svg" alt="">
+          <picture>
+            <source srcset="
+                                      ./assets/illustration_personTwo.avif 1651w,
+                                      ./assets/illustration_personTwo-500.avif 500w,
+                                      ./assets/illustration_personTwo-750.avif 750w,
+                                      ./assets/illustration_personTwo-1200.avif 1200w,
+                                      " sizes="100vw" type="image/avif">
+            <source srcset="
+                                      ./assets/illustration_personTwo.webp 1651w,
+                                      ./assets/illustration_personTwo-500.webp 500w,
+                                      ./assets/illustration_personTwo-750.webp 750w,
+                                      ./assets/illustration_personTwo-1200.webp 1200w,
+                                      " sizes="100vw" type="image/webp">
           <img class="convo__talker convo__talker--two" src="./assets/illustration_personTwo.png" alt="">
+          </picture>
         </div>
         </div>
       </div>
@@ -137,10 +276,48 @@
         <h2>on y va!</h2>
       </div>
       <div class="departure">
+        <picture>
+          <source srcset="
+                            ./assets/departure_train.avif 780w,
+                            ./assets/departure_train-500.avif 500w,
+                            " sizes="100vw" type="image/avif">
+          <source srcset="
+                            ./assets/departure_train.webp 780w,
+                            ./assets/departure_train-500.webp 500w,
+                            " sizes="100vw" type="image/webp">
         <img class="departure--group departure--group__train" src="./assets/departure_train.png" alt="">
+        </picture>
+        <picture>
+          <source srcset="
+                          ./assets/departure_group_one.avif 780w,
+                          ./assets/departure_group_one-500.avif 500w,
+                          " sizes="100vw" type="image/avif">
+          <source srcset="
+                          ./assets/departure_group_one.webp 780w,
+                          ./assets/departure_group_one-500.webp 500w,
+                          " sizes="100vw" type="image/webp">
         <img class="departure--group departure--group__one" src="./assets/departure_group_one.png" alt="">
+        </picture>
+        <source srcset="
+                                  ./assets/departure_group_two.avif 780w,
+                                  ./assets/departure_group_two-500.avif 500w,
+                                  " sizes="100vw" type="image/avif">
+        <source srcset="
+                                  ./assets/departure_group_two.webp 780w,
+                                  ./assets/departure_group_two-500.webp 500w,
+                                  " sizes="100vw" type="image/webp">
         <img class="departure--group departure--group__two" src="./assets/departure_group_two.png" alt="">
+        </picture>
+        <source srcset="
+                            ./assets/departure_group_three.avif 780w,
+                            ./assets/departure_group_three-500.avif 500w,
+                            " sizes="100vw" type="image/avif">
+        <source srcset="
+                            ./assets/departure_group_three.webp 780w,
+                            ./assets/departure_group_three-500.webp 500w,
+                            " sizes="100vw" type="image/webp">
         <img class="departure--group departure--group__three" src="./assets/departure_group_three.png" alt="">
+        </picture>
       </div>
       <div class="train__info">
         <div class="train__info--intro">
@@ -201,8 +378,8 @@
           <img class="person__item person__item--four" src="./assets/item_four.png" alt="">
           <img class="person__item person__item--five" src="./assets/item_five.png" alt="">
           <div class="booking">
-            <p>If you also want to be on the Orient Express?<br><br><span class="booking_text">Book a ticket now!</span><br><br>and check out the replica in our museum.</p>
-            <img src="./assets/book_one.png" alt="">
+            <p><span class="booking_text">Book a ticket now!</span><br><br>and check out the Orient Express replica in our museum.</p>
+            <img src="./assets/ticket.png" alt="">
           </div>
         </div>
         <div class="people__info">
@@ -351,7 +528,23 @@
           </p>
           <img class="destination__image destination__image--one" src="./assets/illustration_station.png" alt="">
         </div>
-        <img class="between" src="./assets/between.png" alt="">
+        <picture>
+          <source srcset="
+                        ./assets/between.avif 2330w,
+                        ./assets/between-500.avif 500w,
+                        ./assets/between-750.avif 750w,
+                        ./assets/between-1200.avif 1200w,
+                        ./assets/between-2000.avif 2000w,
+                        " sizes="100vw" type="image/avif">
+          <source srcset="
+                        ./assets/between.webp 2330w,
+                        ./assets/between-500.webp 500w,
+                        ./assets/between-750.webp 750w,
+                        ./assets/between-1200.webp 1200w,
+                        ./assets/between-2000.webp 2000w,
+                        " sizes="100vw" type="image/webp">
+          <img class="between" src="./assets/between.png" alt="collage of buildings">
+        </picture>
         <div class="destination__two">
           <p>
             This stunning station was built in 1890 by the German architect <span class="blue_text">August Jachmund</span> especially for the Orient
@@ -390,8 +583,9 @@
           days, until
           a snow clearance team turned up. 
         </p>
-        <dotlottie-player class="lottie__stuck" src="https://lottie.host/835c08e0-0d17-45b5-baea-0946d7eb405a/WFGAHqcq4M.json"
-          background="transparent" speed="1"  autoplay></dotlottie-player>
+        
+        <dotlottie-player class="lottie__stuck" src="https://lottie.host/194ab560-3b7c-4319-9279-fc3f76e61aeb/RjbhTc0lsb.json"
+          background="transparent" speed="1" loop autoplay></dotlottie-player>
         <p class="meeting__info--three">
           In the meantime temperatures inside had reached -10°C!
         </p>

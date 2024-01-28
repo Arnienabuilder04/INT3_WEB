@@ -109,6 +109,9 @@ body {
   padding: 0.5rem 2rem;
 
 }
+.chapter__four>h2{
+padding-top: 1rem;
+}
 .chapter__list{
   color: white;
   top: 4rem;
@@ -138,6 +141,7 @@ body {
   cursor: pointer;
 }
 .hamburger {
+  max-width: 3rem;
   transition: transform 0.5s ease;
 }
 .hamburger:hover {
@@ -239,26 +243,29 @@ header {
   max-width: 100vw;
   margin-top: -5vw;
 }
-.intro_rock>:nth-child(1){
- max-width: 100vw;
- max-height: 3vw;
+.rock_one_intro{
+  max-width: 100vw;
+  max-height: 3vw;
+  margin-bottom: 1vw;
 }
-.intro_rock>img{
+.rock_one_intro,.rock_two_intro{
   width: 120vw;
   height: 10vw;
 }
-.intro_rock>:nth-child(1) {
-  margin-bottom: -0.1rem;
-  }
+.intro_rock>:nth-child(1){
+  max-height: 3vw;
+}
 .hero_two {
   height: 14vw;
   width: 200vw;
   bottom: 0vw;
-  left: -100vw;
+  right: 0vw;
   z-index: 8;
 }
 .hero_three {
   width: 80vw;
+  max-width: 60rem;
+  max-height: 30rem;
   height: 40vw;
   bottom: 0;
   right: -20vw;
@@ -268,7 +275,7 @@ header {
   max-width: 100vw;
   max-height: 40rem;
   bottom: 0;
-  left: 0;
+  right: 0;
   z-index: 7;
 }
 .hero_five {
@@ -279,17 +286,19 @@ header {
   z-index: 5;
 }
 .hero_six {
-  max-height: 45rem;
-  width: 70vw;
-  height: 100vw;
+  width: 75vw;
+  height: 95vw;
+  max-height: 47.5rem;
+  max-width: 32.5rem;
   bottom: 0px;
-  left: -25vw;
+  left: -20vw;
   z-index: 4;
 }
 .hero_seven {
-  max-width: 100vw;
+  width: 100vw;
+  max-width: 80rem;
   bottom: 0;
-    left: 0;
+  left: 0;
   z-index: 3;
 }
 .hero_eight {
@@ -345,6 +354,7 @@ header {
   gap: 8vh;
   height: fit-content;
   width: 100vw;
+  max-width: 50rem;
 }
 
 .intro>p {
@@ -383,7 +393,7 @@ header {
 .louise__two {
   align-self: start;
   background: linear-gradient(3deg, rgba(72, 67, 135, 1) 0%, rgba(72, 67, 135, 1) 19%, rgba(72, 67, 135, 1) 84%, rgba(0, 0, 0, 0.7049413515406162) 84%, rgba(0, 0, 0, 0) 87%);
-  margin-top: 20vh;
+  margin-top: 20vw;
   z-index: 1;
   grid-column: 1;
   grid-row: 1/3;
@@ -414,9 +424,11 @@ header {
   padding-top: 10rem;
 }
 
-.louise__three--image {
+.louise__three--image>img
+ {
   width: 30vw;
 }
+
 .louise__three>div {
   width: 100vw;
   max-width: 50rem;
@@ -428,7 +440,8 @@ header {
   align-items: center;
 
 }
-.louise__three>div>img{
+.louise__three>div>img,
+.louise__three>div>picture>img{
   max-width: 15rem;
   padding: 1rem;
   background-color: var(--main-blue);
@@ -456,7 +469,7 @@ header {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
-.louise__four>img {
+.louise__four>picture>img {
   margin-top: 4rem;
   width: 80vw;
   max-width: 30rem;
@@ -613,6 +626,7 @@ header {
 
   width: 100vw;
   height: 20rem;
+  margin-top: -7rem;
 }
 
 .train__info--intro>p {
@@ -929,7 +943,7 @@ header {
 
 }
 .between{
-  max-width: 100vw;
+  width: 100vw;
 }
 .dish {
   width: 90vw;
@@ -1233,14 +1247,15 @@ header {
 }
 
 .meeting__image {
-  max-width: 15rem;
+  max-width: 30rem;
   width: 80vw;
   margin-bottom: -5rem;
 }
 .meeting__info--one{
   margin-top: 2rem;
   text-align: center;
-  max-width: 90vw;
+  width: 90vw;
+  max-width: 40rem;
 }
 .meeting__info--three {
   margin-top: 2rem;
@@ -1250,7 +1265,8 @@ header {
 .meeting__info--four {
   margin-top: 2rem;
   text-align: center;
-  max-width: 90vw;
+  width: 90vw;
+  max-width: 40rem;
   margin-bottom: 2rem;
 }
 .lottie__stuck{
@@ -1383,13 +1399,9 @@ footer{
   align-items: center;
   justify-content: center;
 }
-.logo{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+
 .logo>img{
+  min-width: 5rem;
   width:10vw;
 }
 .map{
@@ -1536,7 +1548,7 @@ font-weight: 600;
       transform: translateY(10rem);
     }
   .hero_lottie {
-     margin-top: 10rem;
+     margin-top: 5rem;
     }
     
   .hero{
@@ -1588,8 +1600,17 @@ font-weight: 600;
           margin-right: 10vw;
         }
 }
+@media (min-width: 816px) {
+.hero_six {
+  left: -10vw;
+}
+}
+
 
 @media (min-width: 1028px) {
+  .hero_six {
+      left: 0vw;
+    }
   .documents__text--one{
     flex-direction: row;
   }
@@ -1632,7 +1653,7 @@ font-weight: 600;
     gap: 5vw;
   }
 
-  .louise__four>img{
+  .louise__four>picture>img{
     max-width: 25rem;
     margin-bottom: 2rem;
     margin-top: 0rem;
@@ -1646,8 +1667,10 @@ font-weight: 600;
   }
   .louise__one{
     justify-self: flex-end;
+  }
+  .louise__one>img{
     margin-right: 10vw;
-    width: 50vw;
+    width: 70vw;
   }
   .louise__two {
     margin-top: 40vh;
@@ -1723,23 +1746,22 @@ font-weight: 600;
       margin-right: 2rem;
     }
   .convo__container {
-    margin-top: -8rem;
+      margin-top: -8rem;
       max-width: 90vw;
+      align-items: center;
     }
   .convo__talker--one {
-    margin-left: 10vw;
-    align-self: flex-start;
+    margin-left: -30vw;
   }
   .convo__talker--two {
-    margin-right: 10vw;
-    align-self: flex-end;
+    margin-right: -30vw;
   }
 
     .convo__detail {
       display: none;
     }
   
-    .convo__talker {
+    .convo__talker>img {
       max-width: 30vw;
     }
 
@@ -1760,9 +1782,24 @@ font-weight: 600;
   
 
 }
-
+@media (min-width: 1200px) {
+  .intro{
+    margin-left: 15vw;
+  }
+  .louise__one>img {
+      max-width: 40rem;
+    }
+  .louise__two{
+        margin-top: 30vh;
+  }
+  .world>img {
+    margin-bottom: 20vw;
+  }
+}
 @media (min-width: 1600px) {
-
+  .world>img {
+    margin-bottom: 40vw;
+  }
   .map>:nth-child(3) {
     margin-left: 20vw;
   }
@@ -1783,13 +1820,17 @@ font-weight: 600;
 
   .convo__container{
     flex-direction: row;
-    max-width: 90vw;
+    max-width: 100vw;
+    justify-content: space-around;
 
   }
   .convo__detail{
     display: none;
   }
   .convo__talker{
+    margin: 2.5vw;
     max-width: 15vw;
+    align-self: center;
   }
+  
 }

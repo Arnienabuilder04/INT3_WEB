@@ -85,6 +85,22 @@ const trainAnimator = () => {
     duration: 3.2,
     ease: 'sine-in',
   })
+  setTimeout(() => {
+    trainAnimatorExtra()
+  }, 5000)
+   
+  }
+const trainAnimatorExtra = () =>{
+  gsap.to('.hero_two', {
+    delay: 10,
+    x: 2000,
+    scrollTrigger: {
+      trigger: '.intro',
+      start: 'top 100%',
+      end: 'top 0%',
+      scrub: 3,
+    },
+  });
 }
 
 const personLayer = () => {
@@ -112,7 +128,6 @@ const checkNavigation = () => {
 }
 
 const logoCheckerOne = () => {
-  document.querySelector('.louise__three--image--wrong_one').src = "./assets/logo_one_a.png"
   document.querySelector('.emblem__feedback').innerHTML = `You picked the wrong emblem, try again!`
 
   setTimeout(() => {
@@ -122,7 +137,6 @@ const logoCheckerOne = () => {
 }
 
 const logoCheckerTwo = () => {
-  document.querySelector('.louise__three--image--right').src = "./assets/logo_two_a.png"
   document.querySelector('.louise__three--image--wrong_two').classList.add('hide')
   document.querySelector('.louise__three--image--wrong_one').classList.add('hide')
   setTimeout(() => {
@@ -132,7 +146,6 @@ const logoCheckerTwo = () => {
 }
 
 const logoCheckerThree = () => {
-  document.querySelector('.louise__three--image--wrong_two').src = "./assets/logo_three_a.png"
   document.querySelector('.emblem__feedback').innerHTML = `You picked the wrong emblem, try again!`
   setTimeout(() => {
     document.querySelector('.louise__three--image--wrong_two').classList.add('hide')
@@ -284,6 +297,7 @@ const temperatureAnimator = () => {
 
   });
 }
+
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   document.querySelector(".chapter__list").style.transform = "+ translateY(-30rem)";
@@ -304,7 +318,7 @@ const init = () => {
   document.querySelector('.hamburger').addEventListener('click', checkNavigation);
 
   document.querySelector('.links').addEventListener('click', checkNavigation);
-  trainAnimator()
+  trainAnimator();
   worldAnimator();
   dishAnimator();
   textAnimator();
