@@ -536,14 +536,14 @@ header {
   gap: 1rem;
 }
 
-.convo__exchange>li {
+.convo__exchange>div {
   border: #BB9010 solid 0.1rem;
   border-radius: 2rem;
   list-style: none;
   max-width: 95vw;
 }
 
-.convo__exchange>li>p {
+.convo__exchange>div>p {
   color: white;
   padding: 1rem 1rem;
   max-width: 80vw;
@@ -754,6 +754,8 @@ header {
   width: 50vw;
   max-width: 30rem;
   position: absolute;
+  left: 50%;
+  margin-left: -25%;
   bottom: 0;
   transform: translateY(40rem);
   transition: transform 0.5s ease;
@@ -875,7 +877,7 @@ header {
   max-width: 40rem;
 }
 
-.items__one>img {
+.items__one>picture>img {
   width: 100vw;
   max-width: 30rem;
 }
@@ -958,7 +960,7 @@ header {
 
 }
 
-.dish>img {
+.dish>picture>img {
   margin: 2rem;
   width: 50vw;
   max-width: 20rem;
@@ -1101,7 +1103,7 @@ header {
 
 }
 
-.world>img {
+.world>picture>img {
   width: 150vw;
 }
 .queen{
@@ -1455,7 +1457,7 @@ footer{
 .previous:hover,.previous:active{
   scale: 1.05;
 }
-.previous>img {
+.previous>picture>img {
   margin: 1rem;
   border-radius: 1rem;
   width: 90vw;
@@ -1591,14 +1593,14 @@ font-weight: 600;
   .destination__image--two{
     max-width: 30vw;
   }
-    .TW_logo {
-      margin-bottom: -0.5rem;
-    }
-        .cards__container>div {
-          width: 20rem;
-          align-self: flex-end;
-          margin-right: 10vw;
-        }
+  .TW_logo {
+    margin-bottom: -0.5rem;
+  }
+  .cards__container>div {
+    width: 20rem;
+    align-self: flex-end;
+    margin-right: 10vw;
+  }
 }
 @media (min-width: 816px) {
 .hero_six {
@@ -1792,12 +1794,12 @@ font-weight: 600;
   .louise__two{
         margin-top: 30vh;
   }
-  .world>img {
+  .world>picture>img {
     margin-bottom: 20vw;
   }
 }
 @media (min-width: 1600px) {
-  .world>img {
+  .world>picture>img {
     margin-bottom: 40vw;
   }
   .map>:nth-child(3) {

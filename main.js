@@ -30,7 +30,7 @@ const worldAnimator = () => {
       pinSpacing: true,
     },
   });
-  tl.to(".world>img", {
+  tl.to(".world>picture", {
     rotation: -220,
   });
 }
@@ -157,9 +157,6 @@ const logoCheckerThree = () => {
 const yourFunction = (event) => {
   if (event.target.classList.contains('awnser__correct')) {
     awnserChecker()
-    console.log('correct')
-  } else {
-    console.log('incorrect')
   }
 }
 
@@ -172,7 +169,6 @@ let i = 0;
 
 const awnserChecker = () => {
   i = i + 1;
-  console.log(i);
   document.querySelector('.result').innerHTML = `<p>Your score is<span class='result__number'> ${i}/5</span><p>`
   return i;
 };
