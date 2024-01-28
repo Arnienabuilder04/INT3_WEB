@@ -229,7 +229,7 @@ header {
   width: 100vw;
   height: 100vh;
 }
-.hero>div>img{
+.hero>div>picture>img{
   position: absolute;
 }
 .intro_rock{
@@ -1072,24 +1072,36 @@ header {
 }
 
 .documents__find--options {
-
   gap: 5vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  width: 100vw;
 }
 
 .documents__find--options>h3 {
+  background-color: white;
+  color: var(--main-blue);
+  padding: 1rem;
+  border-radius: 1rem;
   text-align: center;
   max-width: 30rem;
   width: 80vw;
 }
-
+.document--list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:  space-around;
+}
 .document--image {
-  width: 30vw;
-  max-width: 10rem;
+  background-color: #FEFEFE;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 50vw;
+  max-width: 20rem;
 }
 
 .world {
@@ -1100,11 +1112,11 @@ header {
   justify-content: center;
   align-items: center;
   width: 100vw;
-
 }
 
 .world>picture>img {
   width: 150vw;
+  max-width: 100rem;
 }
 .queen{
   margin-top: -90vw;
@@ -1115,20 +1127,18 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-.landscape__animation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.landscape__animation--train {
+  margin-top: 1rem;
   background-image: url('../assets/view.png');
   background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
+  height: min-content;
 }
 
-.landscape__animation--train {
+.landscape__animation--train>img {
   width: 100vw;
 }
 
@@ -1152,8 +1162,9 @@ header {
 .arrival {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin-top: 4rem;
 }
 
 .arrival__text {
@@ -1163,7 +1174,6 @@ header {
   align-items: center;
   width: 100vw;
   color: black;
-  padding: 2rem;
 }
 
 .arrival__text>p {
@@ -1206,12 +1216,10 @@ header {
   max-width: 30rem;
 }
 .destination__two {
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   margin-top: 0rem;
   width: 100vw;
 }
@@ -1232,9 +1240,11 @@ header {
     width: 90vw;
     max-width: 30rem;
 }
+.destination__two>picture{
+  align-self: flex-start;
+}
 .destination__image--two{
-  align-self:flex-start;
-  max-width: 50vw;
+    max-width: 50vw;
 }
 
 
@@ -1246,6 +1256,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: -0.1rem;
 }
 
 .meeting__image {
@@ -1254,13 +1265,14 @@ header {
   margin-bottom: -5rem;
 }
 .meeting__info--one{
-  margin-top: 2rem;
+  margin-top: 4rem;
   text-align: center;
   width: 90vw;
   max-width: 40rem;
 }
 .meeting__info--three {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
   max-width: 90vw;
 }
@@ -1275,6 +1287,12 @@ header {
   align-self: flex-end;
   width: 100vw;
 }
+.meeting__end--container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .meeting__info--two{
   background-color: white;
   color: black;
@@ -1288,7 +1306,7 @@ header {
 }
 .meeting__info--two>h3{
   font-family: "Italianno";
-  color: var(--dark-gold);
+  color: var(--main-blue);
   font-size: 4rem;
 }
 /*----------------footer-----------------*/
@@ -1301,8 +1319,8 @@ footer{
   justify-content: center;
 }
 .temperature{
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
   background-color: var(--main-red);
   padding: 1rem;
   border-radius: 10rem;
@@ -1523,7 +1541,14 @@ font-weight: 600;
 
 @media (min-width: 678px) {
   
-
+  .document--list{
+    width: 100vw;
+    flex-direction: row;
+  }
+  .document--image{
+    max-width: 15rem;
+    width: 30vw;
+  }
   .person__item--two {
       width: 50vw;
     }
@@ -1768,7 +1793,6 @@ font-weight: 600;
     }
 
   .arrival{
-    margin-left: 5vw;
     flex-direction: row-reverse;
     max-width: 90vw;
   }
@@ -1785,6 +1809,14 @@ font-weight: 600;
 
 }
 @media (min-width: 1200px) {
+  .meeting__end--container {
+      flex-direction: row;
+    }
+    .meeting__info--two{
+      margin-left: 10vw;
+      width: 50vw;
+      align-self: start;
+    }
   .intro{
     margin-left: 15vw;
   }
@@ -1794,12 +1826,17 @@ font-weight: 600;
   .louise__two{
         margin-top: 30vh;
   }
-  .world>picture>img {
+  .world {
     margin-bottom: 20vw;
   }
 }
 @media (min-width: 1600px) {
-  .world>picture>img {
+  .meeting__info--two {
+      margin-left: 30vw;
+      width: 50vw;
+      align-self: start;
+    }
+  .world {
     margin-bottom: 40vw;
   }
   .map>:nth-child(3) {

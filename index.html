@@ -22,11 +22,11 @@
   <header>
     <nav>
       <div class="mobile__nav">
-        <a href="#"><img class="TW_logo"  src="./assets/TW_logo.svg" alt=""></a>
-        <img src="./assets/hamburger.svg" class="hamburger"></img>
+        <a href="#"><img class="TW_logo"  src="./assets/TW_logo.svg" alt=" logo train world"></a>
+        <img src="./assets/hamburger.svg" class="hamburger" alt="hamburger menu"></img>
       </div>
       <div class="desktop__nav">
-        <a><img class="TW_logo" src="./assets/TW_logo.svg" alt=""></a>
+        <a href="#"><img class="TW_logo" src="./assets/TW_logo.svg" alt=" logo train world"></a>
         <div class="chapters">
           <p>chapters</p>
           <p class="arrow">↓</p>
@@ -67,12 +67,94 @@
         <dotlottie-player class="hero_lottie" src="https://lottie.host/165f806b-6813-498a-93ed-18f5cfb33126/jmZKkjkkHN.json"
           background="transparent" speed="1" autoplay></dotlottie-player>
           <div>
-            <img class="hero_two" src="./assets/hero_two.png" alt="">
-            <img class="hero_three" src="./assets/hero_three.png" alt="">
+            <picture>
+              <source srcset="
+                                    ./assets/hero_two.avif 2560w,
+                                    ./assets/hero_two-500.avif 500w,
+                                    ./assets/hero_two-750.avif 750w,
+                                    ./assets/hero_two-1200.avif 1200w,
+                                    ./assets/hero_two-2000.avif 2000w,
+                                    " sizes="100vw" type="image/avif">
+              <source srcset="
+                                    ./assets/hero_two.webp 2560w,
+                                    ./assets/hero_two-500.webp 500w,
+                                    ./assets/hero_two-750.webp 750w,
+                                    ./assets/hero_two-1200.webp 1200w,
+                                    ./assets/hero_two-2000.webp 2000w,
+                                    " sizes="100vw" type="image/webp">
+            <img class="hero_two" src="./assets/hero_two.png" alt="image of orient express">
+            </picture>
+            <picture>
+              <source srcset="
+                                ./assets/hero_three.avif 2560w,
+                                ./assets/hero_three-500.avif 500w,
+                                ./assets/hero_three-750.avif 750w,
+                                ./assets/hero_three-1000.avif 1000w,
+                                " sizes="100vw" type="image/avif">
+              <source srcset="
+                                ./assets/hero_three.webp 2560w,
+                                ./assets/hero_three-500.webp 500w,
+                                ./assets/hero_three-750.webp 750w,
+                                ./assets/hero_three-1000.webp 1000w,
+                                " sizes="100vw" type="image/webp">
+            <img class="hero_three" src="./assets/hero_three.png" alt="piramids of cairo">
+            </picture>
+            <picture>
+              <source srcset="
+                                ./assets/hero_four.avif 1775w,
+                                ./assets/hero_four-500.avif 500w,
+                                ./assets/hero_four-750.avif 750w,
+                                ./assets/hero_four-1200.avif 1200w,
+                                " sizes="100vw" type="image/avif">
+              <source srcset="
+                                ./assets/hero_four.webp 1775w,
+                                ./assets/hero_four-500.webp 500w,
+                                ./assets/hero_four-750.webp 750w,
+                                ./assets/hero_four-1200.webp 1200w,
+                                " sizes="100vw" type="image/webp">
             <img class="hero_four" src="./assets/hero_four.png" alt="">
+            </picture>
+            <picture>
+              <source srcset="
+                              ./assets/hero_five.avif 1019w,
+                              ./assets/hero_five-500.avif 500w,
+                              ./assets/hero_five-750.avif 750w,
+                              " sizes="100vw" type="image/avif">
+              <source srcset="
+                              ./assets/hero_five.webp 1019w,
+                              ./assets/hero_five-500.webp 500w,
+                              ./assets/hero_five-750.webp 750w,
+                              " sizes="100vw" type="image/webp">
             <img class="hero_five" src="./assets/hero_five.png" alt="">
+            </picture>
+            <picture>
+              <source srcset="
+                              ./assets/hero_six.avif 887w,
+                              ./assets/hero_six-500.avif 500w,
+                              ./assets/hero_six-750.avif 750w,
+                              " sizes="100vw" type="image/avif">
+              <source srcset="
+                              ./assets/hero_six.webp 887w,
+                              ./assets/hero_six-500.webp 500w,
+                              ./assets/hero_six-750.webp 750w,
+                              " sizes="100vw" type="image/webp">
             <img class="hero_six" src="./assets/hero_six.png" alt="">
-            <img class="hero_seven" src="./assets/hero_seven.png" alt="">
+            </picture>
+            <picture>
+              <source srcset="
+                                ./assets/hero_seven.avif 887w,
+                                ./assets/hero_seven-500.avif 500w,
+                                ./assets/hero_seven-750.avif 750w,
+                                ./assets/hero_seven-1200.avif 1200w,
+                                " sizes="100vw" type="image/avif">
+              <source srcset="
+                                 ./assets/hero_seven.webp 887w,
+                                 ./assets/hero_seven-500.webp 500w,
+                                 ./assets/hero_seven-750.webp 750w,
+                                 ./assets/hero_seven-1200.webp 1200w,
+                                 " sizes="100vw" type="image/webp">
+              <img class="hero_seven" src="./assets/seven_six.png" alt="">
+            </picture>
           </div>
       </div>
       <div class="intro_rock">
@@ -298,6 +380,7 @@
                           " sizes="100vw" type="image/webp">
         <img class="departure--group departure--group__one" src="./assets/departure_group_one.png" alt="">
         </picture>
+        <picture>
         <source srcset="
                           ./assets/departure_group_two.avif 780w,
                           ./assets/departure_group_two-500.avif 500w,
@@ -308,6 +391,7 @@
                           " sizes="100vw" type="image/webp">
         <img class="departure--group departure--group__two" src="./assets/departure_group_two.png" alt="">
         </picture>
+        <picture>
         <source srcset="
                             ./assets/departure_group_three.avif 780w,
                             ./assets/departure_group_three-500.avif 500w,
@@ -506,7 +590,7 @@
             plates.</p>
         </div>
       </div>
-      <div class="dishes--info">
+      <ul class="dishes--info">
         <p class="menu">Menu</p>
         <picture >
           <source srcset="
@@ -621,7 +705,7 @@
               conclusion to
               the meal.</p>
           </li>
-        </div>
+        </ul>
       </div>
       <div class="documents">
         <div class="documents__intro">
@@ -641,10 +725,11 @@
         </div> 
         <div class="documents__find">
           <div class="documents__find--options">
-            <img class="text__detail text__detail--louise" src="./assets/detail_one.svg" alt="">
+            <img class="text__detail " src="./assets/detail_one.svg" alt="">
             <h3>The train attendant collected all documents when we set off.<br><br>Can you find the right document?
             </h3>
-            <div>
+            <p class="document__feedback">Maybe it's your lucky day!</p>
+            <div class="document--list">
               <picture>
                 <source srcset="
                                 ./assets/book_one.avif 369w,
@@ -679,7 +764,6 @@
               <img class="document--image document--image--wrong_two" src="./assets/book_three.png" alt="book">
               </picture>
             </div>
-            <p class="document__feedback">Maybe it's your lucky day!</p>
             <img class="text__detail" src="./assets/detail_one.svg" alt="">
           </div>
         </div>
@@ -689,9 +773,7 @@
         </div>
       </div>
     </section>
-
     <section class="landscape">
-        <div class="landscape__animation">
           <picture>
             <source srcset="
                                       ./assets/view_window.avif 883w,
@@ -707,7 +789,6 @@
           <img class="landscape__animation--train" src="./assets/view_window.png" alt="">
           </picture>
         </div>
-      </div>
         <div class="landscape__info">
           <p>It was exciting to watch the changing landscape. The further we went, the more exotic the surroundings
             became.</p>
@@ -840,6 +921,7 @@
         <div class="temperature">
           0,0000°C
         </div>
+        <div class="meeting__end--container">
         <p class="meeting__info--four">
           That story
           incidentally was the
@@ -865,6 +947,7 @@
                                 " sizes="100vw" type="image/webp">
         <img class="meeting__image" src="./assets/murder__book.png" alt="book murder on the orient express">
         </picture>
+        </div>
         <div class="meeting__info meeting__info--two">
           <h3>Fin</h3>
           <p>In any case, I will always remember that journey as the greatest
@@ -945,7 +1028,7 @@
           <img src="./assets/TW_logo.svg" alt="">
         </div>
         <div>
-          <a class="ticket">Tickets</a>
+          <a href="https://webshoptrainworld.recreatex.be/Exhibitions/Overview?language=en" class="ticket">Tickets</a>
         </div>
       </div>
 

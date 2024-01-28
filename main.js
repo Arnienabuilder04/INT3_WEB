@@ -1,6 +1,3 @@
-
-
-
 const textAnimator = () => {
   const persons = document.querySelectorAll('.text');
 
@@ -18,20 +15,44 @@ const textAnimator = () => {
     });
   });
 }
+
+
+
 const worldAnimator = () => {
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.world',
-      start: 'top 50%',
-      end: 'bottom 0%',
-      transformOrigin: '50% 50%',
-      pin: true,
-      scrub: 3,
-      pinSpacing: true,
-    },
+  const mm = gsap.matchMedia();
+
+  mm.add("(max-width: 1028px)", () => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.world',
+        start: 'top 50%',
+        end: 'bottom 0%',
+        transformOrigin: '50% 50%',
+        pin: true,
+        scrub: 3,
+        pinSpacing: true,
+      },
+    });
+    tl.to(".world>picture", {
+      rotation: -220,
+    });
   });
-  tl.to(".world>picture", {
-    rotation: -220,
+
+  mm.add("(min-width: 1029px)", () => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.world',
+        start: 'top 20%',
+        end: 'bottom 0%',
+        transformOrigin: '50% 50%',
+        pin: true,
+        scrub: 3,
+        pinSpacing: true,
+      },
+    });
+    tl.to(".world>picture", {
+      rotation: -220,
+    });
   });
 }
 const dishAnimator = () => {
@@ -208,7 +229,7 @@ const checkNavigationDesktop = () => {
   }
 }
 const landscapeAnimator = () => {
-  gsap.to('.landscape__animation', {
+  gsap.to('.landscape__animation--train', {
     backgroundPosition: "100% 0",
     scrollTrigger: {
       trigger: '.landscape__animation--train',
