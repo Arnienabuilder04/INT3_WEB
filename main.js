@@ -150,28 +150,18 @@ const checkNavigation = () => {
 
 const logoCheckerOne = () => {
   document.querySelector('.emblem__feedback').innerHTML = `You picked the wrong emblem, try again!`
-
-  setTimeout(() => {
-    document.querySelector('.louise__three--image--wrong_one').classList.add('hide')
-      ;
-  }, 1000)
+  document.querySelector('.louise__three--image--wrong_one').classList.add('hide')
 }
 
 const logoCheckerTwo = () => {
   document.querySelector('.louise__three--image--wrong_two').classList.add('hide')
   document.querySelector('.louise__three--image--wrong_one').classList.add('hide')
-  setTimeout(() => {
-    document.querySelector('.emblem__feedback').innerHTML = `This is indeed the right emblem, good job!`
-      ;
-  }, 1000)
+  document.querySelector('.emblem__feedback').innerHTML = `This is indeed the right emblem, good job!`;
 }
 
 const logoCheckerThree = () => {
   document.querySelector('.emblem__feedback').innerHTML = `You picked the wrong emblem, try again!`
-  setTimeout(() => {
-    document.querySelector('.louise__three--image--wrong_two').classList.add('hide')
-      ;
-  }, 1000)
+  document.querySelector('.louise__three--image--wrong_two').classList.add('hide');
 }
 
 

@@ -27,6 +27,10 @@ html {
   color: var(--light-gold);
   font-weight: 800;
 }
+.white_text {
+  color: #FEFEFE;
+  font-weight: 800;
+}
 
 body {
   font-family: "Josefin Slab", serif;
@@ -252,51 +256,55 @@ header {
   width: 120vw;
   height: 10vw;
 }
+.rock_two_intro{
+  margin-top: -1vw;
+}
 .intro_rock>:nth-child(1){
   max-height: 3vw;
 }
 .hero_two {
-  height: 14vw;
   width: 200vw;
+  max-width: 70rem;
+  margin-bottom: 2.5vw;
   bottom: 0vw;
-  right: 0vw;
+  right: 40vw;
   z-index: 8;
 }
 .hero_three {
   width: 80vw;
   max-width: 60rem;
-  max-height: 30rem;
-  height: 40vw;
+  height: auto;
   bottom: 0;
   right: -20vw;
   z-index: 6;
 }
 .hero_four {
-  max-width: 100vw;
-  max-height: 40rem;
+  width: 100vw;
+  max-width: 50rem;
+  height: auto;
   bottom: 0;
   right: 0;
   z-index: 7;
 }
 .hero_five {
-  max-width: 100vw;
-  max-height: 30rem;
+  width: 100vw;
+  max-width: 40rem;
   bottom: -50px;
   left: 0;
   z-index: 5;
 }
 .hero_six {
   width: 75vw;
-  height: 95vw;
-  max-height: 47.5rem;
-  max-width: 32.5rem;
+  height: auto;
+  max-width: 12.5rem;
   bottom: 0px;
   left: -20vw;
   z-index: 4;
 }
 .hero_seven {
   width: 100vw;
-  max-width: 80rem;
+  max-width: 50rem;
+  height: auto;
   bottom: 0;
   left: 0;
   z-index: 3;
@@ -986,7 +994,7 @@ header {
 }
 .landscape__info>p,
 .documents__text--two>p{
-  width: 90vw;
+  width: 85vw;
   max-width: 30rem;
 }
 .documents__intro {
@@ -1173,6 +1181,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  max-width: 30rem;
   color: black;
 }
 
@@ -1495,10 +1504,15 @@ font-weight: 600;
 }
 
 
-
-
-
+@media (min-width: 375px) {
+.hero_six {
+  max-width: 14rem;
+}
+}
 @media (min-width: 450px) {
+  .hero_six {
+      max-width: 18rem;
+    }
   .person__item--one {
       max-width: 10rem;
       transform: translateY(10rem);
@@ -1540,6 +1554,9 @@ font-weight: 600;
 }
 
 @media (min-width: 678px) {
+  .hero_six {
+      max-width: 22.5rem;
+    }
   
   .document--list{
     width: 100vw;
@@ -1830,7 +1847,37 @@ font-weight: 600;
     margin-bottom: 20vw;
   }
 }
+@media (min-width: 1400px) {
+
+  .hero_lottie {
+      max-width: 35rem;
+    }
+  .hero_six {
+      max-width: 30rem;
+    }
+}
 @media (min-width: 1600px) {
+  body{
+    font-size: 28px;
+  }
+  .hero_two{
+    max-width: 80rem;
+  }
+  .hero_three {
+    max-width: 70rem;
+  }
+  .hero_four {
+    max-width: 70rem;
+  }
+  .hero_five {
+    max-width: 50rem;
+  }
+  .hero_six {
+    max-width: 30rem;
+  }
+  .hero_seven {
+    max-width: 70rem;
+  }
   .meeting__info--two {
       margin-left: 30vw;
       width: 50vw;
